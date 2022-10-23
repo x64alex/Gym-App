@@ -6,7 +6,7 @@ struct Workout_screen: View {
     
     var body: some View {
         VStack {
-            NavigationLink(destination: New_workout(),
+            NavigationLink(destination: AddExerciseView(),
                                label: {
                     Text("Add exercise")
                         .font(.system(size: 20, weight: .bold, design: .rounded))

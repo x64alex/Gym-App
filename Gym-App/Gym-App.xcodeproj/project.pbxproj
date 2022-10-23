@@ -14,6 +14,11 @@
 		13054B062905689E00BD1306 /* Gym_AppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13054B052905689E00BD1306 /* Gym_AppUITests.swift */; };
 		13054B082905689E00BD1306 /* Gym_AppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13054B072905689E00BD1306 /* Gym_AppUITestsLaunchTests.swift */; };
 		13054B1629056D1500BD1306 /* Workout screen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13054B1529056D1500BD1306 /* Workout screen.swift */; };
+		13054B18290570A300BD1306 /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13054B17290570A300BD1306 /* Home.swift */; };
+		13054B1A2905716500BD1306 /* New_workout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13054B192905716500BD1306 /* New_workout.swift */; };
+		13054B1E2905731C00BD1306 /* Storage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13054B1D2905731C00BD1306 /* Storage.swift */; };
+		13054B222905773A00BD1306 /* Exercise.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13054B212905773A00BD1306 /* Exercise.swift */; };
+		13054B2429057D5E00BD1306 /* WorkoutViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13054B2329057D5E00BD1306 /* WorkoutViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +49,11 @@
 		13054B052905689E00BD1306 /* Gym_AppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Gym_AppUITests.swift; sourceTree = "<group>"; };
 		13054B072905689E00BD1306 /* Gym_AppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Gym_AppUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		13054B1529056D1500BD1306 /* Workout screen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Workout screen.swift"; sourceTree = "<group>"; };
+		13054B17290570A300BD1306 /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
+		13054B192905716500BD1306 /* New_workout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = New_workout.swift; sourceTree = "<group>"; };
+		13054B1D2905731C00BD1306 /* Storage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Storage.swift; path = "../../../../yopeso-portal-ios/YopesoPortal/Core/Services/Storage/Storage.swift"; sourceTree = "<group>"; };
+		13054B212905773A00BD1306 /* Exercise.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Exercise.swift; sourceTree = "<group>"; };
+		13054B2329057D5E00BD1306 /* WorkoutViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,10 +104,11 @@
 		13054AE92905689D00BD1306 /* Gym-App */ = {
 			isa = PBXGroup;
 			children = (
+				13054B1F2905771500BD1306 /* Model */,
+				13054B1C2905730400BD1306 /* UI */,
+				13054B1B290572FC00BD1306 /* Storage */,
 				13054AEA2905689D00BD1306 /* Gym_AppApp.swift */,
-				13054AEC2905689D00BD1306 /* ContentView.swift */,
 				13054AEE2905689E00BD1306 /* Assets.xcassets */,
-				13054B1529056D1500BD1306 /* Workout screen.swift */,
 			);
 			path = "Gym-App";
 			sourceTree = "<group>";
@@ -117,6 +128,34 @@
 				13054B072905689E00BD1306 /* Gym_AppUITestsLaunchTests.swift */,
 			);
 			path = "Gym-AppUITests";
+			sourceTree = "<group>";
+		};
+		13054B1B290572FC00BD1306 /* Storage */ = {
+			isa = PBXGroup;
+			children = (
+				13054B1D2905731C00BD1306 /* Storage.swift */,
+			);
+			path = Storage;
+			sourceTree = "<group>";
+		};
+		13054B1C2905730400BD1306 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				13054AEC2905689D00BD1306 /* ContentView.swift */,
+				13054B1529056D1500BD1306 /* Workout screen.swift */,
+				13054B2329057D5E00BD1306 /* WorkoutViewModel.swift */,
+				13054B17290570A300BD1306 /* Home.swift */,
+				13054B192905716500BD1306 /* New_workout.swift */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		13054B1F2905771500BD1306 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				13054B212905773A00BD1306 /* Exercise.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -248,9 +287,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				13054B2429057D5E00BD1306 /* WorkoutViewModel.swift in Sources */,
 				13054AED2905689D00BD1306 /* ContentView.swift in Sources */,
 				13054AEB2905689D00BD1306 /* Gym_AppApp.swift in Sources */,
+				13054B18290570A300BD1306 /* Home.swift in Sources */,
+				13054B1A2905716500BD1306 /* New_workout.swift in Sources */,
 				13054B1629056D1500BD1306 /* Workout screen.swift in Sources */,
+				13054B222905773A00BD1306 /* Exercise.swift in Sources */,
+				13054B1E2905731C00BD1306 /* Storage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -416,6 +460,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -444,6 +489,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

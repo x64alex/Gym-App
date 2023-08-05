@@ -2,6 +2,7 @@ import SwiftUI
 
 struct Home: View {
     var numberWorkouts = 0
+    //@AppStorage("workouts") var workouts: [Workout] = []
     var body: some View {
         VStack{
             NavigationLink(destination: New_workout(),
@@ -18,6 +19,13 @@ struct Home: View {
                     })
                 
             }
+            NavigationLink(destination: FinishedWorkouts(),
+                               label: {
+                    Text("See workouts")
+                        .font(.system(size: 20, weight: .bold, design: .rounded))
+                })
+            
+            
         }
     }
 }

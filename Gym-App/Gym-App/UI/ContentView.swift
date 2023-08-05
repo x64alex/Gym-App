@@ -13,8 +13,14 @@ struct ContentView: View {
                     }
                     .tag(0)
                 
-                Text("Learn")
-                    .font(.system(size: 30, weight: .bold, design: .rounded))
+                VStack{
+                    Text("Learn")
+                        .font(.system(size: 30, weight: .bold, design: .rounded))
+                    Button("Clear workouts") {                        
+                            UserDefaults.standard.removeObject(forKey: "doneworkouts")
+
+                    }
+                }
                     .tabItem {
                         Image(systemName: "bookmark.circle.fill")
                         Text("Learn")

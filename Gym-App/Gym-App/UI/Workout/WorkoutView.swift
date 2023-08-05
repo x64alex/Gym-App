@@ -4,7 +4,7 @@ import SwiftUI
 struct Workout_screen: View {
     @Environment(\.scenePhase) var appState
 
-    @ObservedObject var viewModel: ViewModel
+    @StateObject var viewModel: ViewModel
     
     @State private var currentId = 0
     

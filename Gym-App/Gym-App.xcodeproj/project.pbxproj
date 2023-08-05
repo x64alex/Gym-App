@@ -21,6 +21,8 @@
 		13054B282905812F00BD1306 /* AddExerciseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13054B272905812F00BD1306 /* AddExerciseView.swift */; };
 		13054B2B2905820B00BD1306 /* Workout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13054B2A2905820B00BD1306 /* Workout.swift */; };
 		AF147C0E2A7E8F3E00095427 /* Home_ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF147C0D2A7E8F3E00095427 /* Home_ViewModel.swift */; };
+		AF147C102A7E92BD00095427 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF147C0F2A7E92BD00095427 /* AppDelegate.swift */; };
+		AF147C122A7E950000095427 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF147C112A7E950000095427 /* AppState.swift */; };
 		AF76DD652A7849CA0014A075 /* RealWorkout.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF76DD642A7849CA0014A075 /* RealWorkout.swift */; };
 		AF76DD672A784B3A0014A075 /* RealExercise.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF76DD662A784B3A0014A075 /* RealExercise.swift */; };
 		AF76DD692A784BA70014A075 /* Repetition.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF76DD682A784BA70014A075 /* Repetition.swift */; };
@@ -63,6 +65,8 @@
 		13054B272905812F00BD1306 /* AddExerciseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddExerciseView.swift; sourceTree = "<group>"; };
 		13054B2A2905820B00BD1306 /* Workout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Workout.swift; sourceTree = "<group>"; };
 		AF147C0D2A7E8F3E00095427 /* Home_ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home_ViewModel.swift; sourceTree = "<group>"; };
+		AF147C0F2A7E92BD00095427 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		AF147C112A7E950000095427 /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppState.swift; path = "Gym-App/AppState.swift"; sourceTree = SOURCE_ROOT; };
 		AF76DD642A7849CA0014A075 /* RealWorkout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealWorkout.swift; sourceTree = "<group>"; };
 		AF76DD662A784B3A0014A075 /* RealExercise.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealExercise.swift; sourceTree = "<group>"; };
 		AF76DD682A784BA70014A075 /* Repetition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repetition.swift; sourceTree = "<group>"; };
@@ -122,6 +126,7 @@
 				13054B1C2905730400BD1306 /* UI */,
 				13054AEA2905689D00BD1306 /* Gym_AppApp.swift */,
 				13054AEE2905689E00BD1306 /* Assets.xcassets */,
+				AF147C0F2A7E92BD00095427 /* AppDelegate.swift */,
 			);
 			path = "Gym-App";
 			sourceTree = "<group>";
@@ -151,6 +156,7 @@
 				13054AEC2905689D00BD1306 /* ContentView.swift */,
 				13054B192905716500BD1306 /* New_workout.swift */,
 				AF76DD6D2A7866F00014A075 /* FinishedWorkouts.swift */,
+				AF147C112A7E950000095427 /* AppState.swift */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -338,8 +344,10 @@
 				13054B282905812F00BD1306 /* AddExerciseView.swift in Sources */,
 				AF76DD692A784BA70014A075 /* Repetition.swift in Sources */,
 				13054AED2905689D00BD1306 /* ContentView.swift in Sources */,
+				AF147C122A7E950000095427 /* AppState.swift in Sources */,
 				13054B2B2905820B00BD1306 /* Workout.swift in Sources */,
 				13054AEB2905689D00BD1306 /* Gym_AppApp.swift in Sources */,
+				AF147C102A7E92BD00095427 /* AppDelegate.swift in Sources */,
 				AF76DD672A784B3A0014A075 /* RealExercise.swift in Sources */,
 				13054B18290570A300BD1306 /* Home.swift in Sources */,
 				13054B1A2905716500BD1306 /* New_workout.swift in Sources */,

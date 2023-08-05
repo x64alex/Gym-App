@@ -2,36 +2,54 @@ import SwiftUI
 
 struct Home: View {
     var numberWorkouts = 0
-    
-    @ObservedObject var viewModel: ViewModel
+    @StateObject var viewModel: ViewModel
 
-    //@AppStorage("workouts") var workouts: [Workout] = []
+    @EnvironmentObject private var appState: AppState
+    @SceneStorage("isDetailViewActive") private var isDetailViewActive: Bool = false
+
     var body: some View {
-        VStack{
-            NavigationLink(destination: New_workout(),
+        NavigationView {
+            VStack{
+                NavigationLink(destination: New_workout(),
                                label: {
                     Text("Add workout")
                         .font(.system(size: 20, weight: .bold, design: .rounded))
                 })
-            List(0..<viewModel.workouts.count, id: \.self) { index in
-                NavigationLink(
-                    destination: Workout_screen(viewModel: Workout_screen.ViewModel(workoutNumber: index)),
-                    label: {
-                        Text(viewModel.workouts[index].name)
-                            .font(.system(size: 20, weight: .bold, design: .rounded))
-                    })
-                
-            }
-            NavigationLink(destination: FinishedWorkouts(),
+                List(0..<viewModel.workouts.count, id: \.self) { index in
+                    NavigationLink(
+                        destination: Workout_screen(viewModel: Workout_screen.ViewModel(workoutNumber: index))
+                        , isActive: isActive(index),
+                        label: {
+                            Text(viewModel.workouts[index].name)
+                                .font(.system(size: 20, weight: .bold, design: .rounded))
+                        })
+                    
+                }
+                NavigationLink(destination: FinishedWorkouts(),
                                label: {
                     Text("See workouts")
                         .font(.system(size: 20, weight: .bold, design: .rounded))
                 })
-            
-            
+                
+                
+            }
+            .onAppear {
+                viewModel.loadWorkouts()
+            }
         }
-        .onAppear {
-            viewModel.loadWorkouts()
+        .onChange(of: isDetailViewActive) { newValue in
+            // Update the appState's isDetailViewActive whenever it changes.
+            appState.isDetailViewActive = newValue
         }
+    }
+    
+    private func isActive(_ index: Int) -> Binding<Bool> {
+        Binding<Bool>(
+            get: { appState.isDetailViewActive && isDetailViewActive },
+            set: { newValue in
+                isDetailViewActive = newValue
+                appState.isDetailViewActive = newValue
+            }
+        )
     }
 }

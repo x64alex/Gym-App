@@ -2,19 +2,22 @@ import SwiftUI
 
 struct Home: View {
     var numberWorkouts = 0
+    
+    @ObservedObject var viewModel: ViewModel
+
     //@AppStorage("workouts") var workouts: [Workout] = []
     var body: some View {
         VStack{
             NavigationLink(destination: New_workout(),
                                label: {
-                    Text("Add")
+                    Text("Add workout")
                         .font(.system(size: 20, weight: .bold, design: .rounded))
                 })
-            List(0...10, id: \.self) { index in
+            List(0..<viewModel.workouts.count, id: \.self) { index in
                 NavigationLink(
-                    destination: Workout_screen(viewModel: Workout_screen.ViewModel()),
+                    destination: Workout_screen(viewModel: Workout_screen.ViewModel(workoutNumber: index)),
                     label: {
-                        Text("Item #\(index)")
+                        Text(viewModel.workouts[index].name)
                             .font(.system(size: 20, weight: .bold, design: .rounded))
                     })
                 
@@ -27,11 +30,8 @@ struct Home: View {
             
             
         }
-    }
-}
-
-struct Home_Previews: PreviewProvider {
-    static var previews: some View {
-        Home()
+        .onAppear {
+            viewModel.loadWorkouts()
+        }
     }
 }

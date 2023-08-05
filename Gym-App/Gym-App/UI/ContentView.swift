@@ -6,7 +6,7 @@ struct ContentView: View {
     var body: some View {
         NavigationView {
             TabView(selection: $selection) {
-                Home()
+                Home(viewModel: Home.ViewModel())
                     .tabItem {
                         Image(systemName: "house.fill")
                         Text("Workouts")

@@ -55,49 +55,113 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "F67E4523-75FE-403A-9C5B-32066AEB44DA"
+            uuid = "7BD051D7-90C3-48CD-82ED-697BC99C0AD5"
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Gym-App/UI/New_workout.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "6"
-            endingLineNumber = "6"
-            landmarkName = "body"
-            landmarkType = "24">
+            startingLineNumber = "54"
+            endingLineNumber = "54"
+            landmarkName = "getAllExercise()"
+            landmarkType = "7">
             <Locations>
                <Location
-                  uuid = "F67E4523-75FE-403A-9C5B-32066AEB44DA - c6127412869ca043"
+                  uuid = "7BD051D7-90C3-48CD-82ED-697BC99C0AD5 - b3f03dcd0dc98c10"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "closure #1 () -&gt; () in Gym_App.New_workout.body.getter : some"
+                  symbolName = "Gym_App.New_workout.getAllExercise() -&gt; ()"
                   moduleName = "Gym-App"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/acantor/Documents/GitHub/Gym-App/Gym-App/Gym-App/UI/New_workout.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "6"
-                  endingLineNumber = "6"
-                  offsetFromSymbolStart = "63">
+                  startingLineNumber = "56"
+                  endingLineNumber = "56"
+                  offsetFromSymbolStart = "90">
                </Location>
                <Location
-                  uuid = "F67E4523-75FE-403A-9C5B-32066AEB44DA - c6127412869ca043"
+                  uuid = "7BD051D7-90C3-48CD-82ED-697BC99C0AD5 - b3f03dcd0dc98c10"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "closure #1 () -&gt; () in Gym_App.New_workout.body.getter : some"
+                  symbolName = "Gym_App.New_workout.getAllExercise() -&gt; ()"
                   moduleName = "Gym-App"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/acantor/Documents/GitHub/Gym-App/Gym-App/Gym-App/UI/New_workout.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "6"
-                  endingLineNumber = "6"
-                  offsetFromSymbolStart = "80">
+                  startingLineNumber = "56"
+                  endingLineNumber = "56"
+                  offsetFromSymbolStart = "299">
                </Location>
             </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "708097B0-38C1-4082-9614-2727E13EB32A"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Gym-App/UI/Exercises.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "24"
+            endingLineNumber = "24"
+            landmarkName = "addExercise()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "708097B0-38C1-4082-9614-2727E13EB32A - 5a33444c70237888"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Gym_App.Exercises.addExercise() -&gt; ()"
+                  moduleName = "Gym-App"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/acantor/Documents/GitHub/Gym-App/Gym-App/Gym-App/UI/Exercises.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "25"
+                  endingLineNumber = "25"
+                  offsetFromSymbolStart = "425">
+               </Location>
+               <Location
+                  uuid = "708097B0-38C1-4082-9614-2727E13EB32A - 5a33444c70237888"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Gym_App.Exercises.addExercise() -&gt; ()"
+                  moduleName = "Gym-App"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/acantor/Documents/GitHub/Gym-App/Gym-App/Gym-App/UI/Exercises.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "25"
+                  endingLineNumber = "25"
+                  offsetFromSymbolStart = "634">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "D525154C-BD02-464C-B5EE-99238E19D314"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Gym-App/UI/Workout/WorkoutViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "16"
+            endingLineNumber = "16"
+            landmarkName = "loadWorkout()"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

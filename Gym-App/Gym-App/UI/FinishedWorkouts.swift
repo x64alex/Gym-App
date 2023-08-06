@@ -27,9 +27,9 @@ struct FinishedWorkouts: View {
                 }
             }
         }
-        Button("See trainigs") {
-
-        }
+//        Button("See trainigs") {
+//
+//        }
     }
 }
 

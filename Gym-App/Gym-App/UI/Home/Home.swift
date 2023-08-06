@@ -17,8 +17,8 @@ struct Home: View {
                 })
                 List(0..<viewModel.workouts.count, id: \.self) { index in
                     NavigationLink(
-                        destination: Workout_screen(viewModel: Workout_screen.ViewModel(workoutNumber: index))
-                        , isActive: isActive(index),
+                        destination: Workout_screen(viewModel: Workout_screen.ViewModel(workoutNumber: index)),
+//                        , isActive: isActive(index),
                         label: {
                             Text(viewModel.workouts[index].name)
                                 .font(.system(size: 20, weight: .bold, design: .rounded))

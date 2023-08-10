@@ -18,11 +18,16 @@ struct WorkoutHome: View {
                 List(0..<viewModel.workouts.count, id: \.self) { index in
                     NavigationLink(
                         destination: Workout_screen(viewModel: Workout_screen.ViewModel(workoutNumber: index)),
-//                        , isActive: isActive(index),
                         label: {
                             Text(viewModel.workouts[index].name)
                                 .font(.system(size: 20, weight: .bold, design: .rounded))
                         })
+                    .swipeActions {
+                        Button("Remove") {
+                            viewModel.deleteWorkout(index: index)
+                        }
+                        .tint(Colors.removeColor)
+                    }
                     
                 }
                 NavigationLink(destination: FinishedWorkouts(),

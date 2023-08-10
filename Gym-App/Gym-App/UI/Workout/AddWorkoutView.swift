@@ -21,8 +21,6 @@ struct AddWorkoutView: View {
             }.frame(height: CGFloat(workoutExercises.count)*20)
             
             VStack(spacing: 0) {
-
-                
                 Picker(selection: $exerciseName, label: Text("Favorite Food")) {
                     ForEach(allExercisesNames, id:\.self) { exercise in // <2>
                         Text(exercise)

@@ -67,7 +67,6 @@ struct Workout_screen: View {
                         workouts.append(viewModel.workout)
                         
                         let data = try encoder.encode(workouts)
-                        
                         UserDefaults.standard.set(data, forKey: "doneworkouts")
 
                     } catch {

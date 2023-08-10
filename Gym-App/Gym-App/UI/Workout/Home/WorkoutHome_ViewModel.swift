@@ -2,22 +2,20 @@ import Foundation
 
 extension WorkoutHome {
     class ViewModel: ObservableObject {
+        private var storage: Storage
         @Published var workouts: [Workout] = []
         
-                
+        init(storage: Storage) {
+            self.storage = storage
+        }
+
         
         func loadWorkouts() {
-            if let data = UserDefaults.standard.data(forKey: "workouts") {
-                do {
-                    let decoder = JSONDecoder()
-
-                    workouts = try decoder.decode([Workout].self, from: data)
-                    
-
-                } catch {
-                    print("Unable to Decode Note (\(error))")
-                }
-            }
+            workouts = storage.getDataArray(storageKey: "workouts")
+        }
+        
+        func deleteWorkout(index: Int){
+            workouts = storage.deleteElementAtIndex(storageKey: "workouts", index: index)
         }
     }
 }

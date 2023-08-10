@@ -1,6 +1,6 @@
 import Foundation
 
-extension Home {
+extension WorkoutHome {
     class ViewModel: ObservableObject {
         @Published var workouts: [Workout] = []
         
@@ -9,10 +9,8 @@ extension Home {
         func loadWorkouts() {
             if let data = UserDefaults.standard.data(forKey: "workouts") {
                 do {
-                    // Create JSON Decoder
                     let decoder = JSONDecoder()
 
-                    // Decode Note
                     workouts = try decoder.decode([Workout].self, from: data)
                     
 

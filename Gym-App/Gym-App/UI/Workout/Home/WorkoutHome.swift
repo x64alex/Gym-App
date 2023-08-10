@@ -1,6 +1,6 @@
 import SwiftUI
 
-struct Home: View {
+struct WorkoutHome: View {
     var numberWorkouts = 0
     @StateObject var viewModel: ViewModel
 
@@ -10,7 +10,7 @@ struct Home: View {
     var body: some View {
         NavigationView {
             VStack{
-                NavigationLink(destination: New_workout(),
+                NavigationLink(destination: AddWorkoutView(),
                                label: {
                     Text("Add workout")
                         .font(.system(size: 20, weight: .bold, design: .rounded))

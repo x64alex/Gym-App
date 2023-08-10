@@ -1,6 +1,5 @@
 import SwiftUI
 
-
 struct Workout_screen: View {
     @Environment(\.scenePhase) var appState
 

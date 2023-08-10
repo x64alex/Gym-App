@@ -1,6 +1,6 @@
 import SwiftUI
 
-struct New_workout: View {
+struct AddWorkoutView: View {
     @State private var exerciseName = ""
     @State private var workoutName = ""
     @State private var workoutExercises:[Exercise] = []
@@ -112,8 +112,8 @@ struct New_workout: View {
     
 }
 
-struct New_workout_Previews: PreviewProvider {
+struct AddWorkoutView_Previews: PreviewProvider {
     static var previews: some View {
-        New_workout()
+        AddWorkoutView()
     }
 }

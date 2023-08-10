@@ -1,40 +1,30 @@
 import SwiftUI
 
-struct ContentView: View {
+struct AppTabView: View {
     @State private var selection = 0
 
     var body: some View {
         NavigationView {
             TabView(selection: $selection) {
-                Home(viewModel: Home.ViewModel())
+                WorkoutHome(viewModel: WorkoutHome.ViewModel())
                     .tabItem {
                         Image(systemName: "house.fill")
                         Text("Workouts")
                     }
                     .tag(0)
-                
-                VStack{
-                    Text("Learn")
-                        .font(.system(size: 30, weight: .bold, design: .rounded))
-                    Button("Clear workouts") {                        
-                            UserDefaults.standard.removeObject(forKey: "doneworkouts")
-
-                    }
-                }
+                LearnView()
                     .tabItem {
                         Image(systemName: "bookmark.circle.fill")
                         Text("Learn")
                     }
                     .tag(1)
-                
                 Exercises()
                     .tabItem {
                         Image(systemName: "video.circle.fill")
                         Text("Exercises")
                     }
                     .tag(2)
-                
-                Text("Profile Tab")
+                ProfileView()
                     .font(.system(size: 30, weight: .bold, design: .rounded))
                     .tabItem {
                         Image(systemName: "person.crop.circle")
@@ -42,16 +32,8 @@ struct ContentView: View {
                     }
                     .tag(3)
             }
-            .accentColor(.red)
-            .onAppear() {
-                UITabBar.appearance().barTintColor = .white
-            }
+            .accentColor(Colors.TabBar.tint)
+            .toolbarBackground(Colors.TabBar.bar, for: .tabBar)
         }
-    }
-}
-
-struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        ContentView()
     }
 }

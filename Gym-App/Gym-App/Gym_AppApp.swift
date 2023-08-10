@@ -6,7 +6,7 @@ struct Gym_AppApp: App {
     
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            AppTabView()
                 .environmentObject(appState)
         }
     }

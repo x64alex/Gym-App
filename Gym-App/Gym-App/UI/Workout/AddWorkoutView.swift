@@ -1,6 +1,8 @@
 import SwiftUI
 
-struct New_workout: View {
+struct AddWorkoutView: View {
+    @EnvironmentObject private var storage: Storage
+
     @State private var exerciseName = ""
     @State private var workoutName = ""
     @State private var workoutExercises:[Exercise] = []
@@ -21,8 +23,6 @@ struct New_workout: View {
             }.frame(height: CGFloat(workoutExercises.count)*20)
             
             VStack(spacing: 0) {
-
-                
                 Picker(selection: $exerciseName, label: Text("Favorite Food")) {
                     ForEach(allExercisesNames, id:\.self) { exercise in // <2>
                         Text(exercise)
@@ -51,69 +51,28 @@ struct New_workout: View {
     }
     
     func getAllExercise(){
-        if let data = UserDefaults.standard.data(forKey: "exercises") {
-            do {
-                // Create JSON Decoder
-                let decoder = JSONDecoder()
-
-                // Decode Note
-                var allExercises = try decoder.decode([Exercise].self, from: data)
-                
-                allExercisesNames = allExercises.map{ (exercise) -> String in
-                    return exercise.name
-                }
-
-            } catch {
-                print("Unable to Decode Note (\(error))")
-            }
+        let exercises: [Exercise] = storage.getArray(storageKey: "exercises")
+        allExercisesNames = exercises.map{ (exercise) -> String in
+            return exercise.name
         }
     }
     
     func addExercise(){
-        var newExercise = Exercise(sets: setsNumber, name: exerciseName)
+        let newExercise = Exercise(sets: setsNumber, name: exerciseName)
         newExercise.sets = setsNumber
         workoutExercises.append(newExercise)
     }
     
     func addWorkout(){
-        var workout = Workout(name: workoutName, exercises: workoutExercises)
-        if let data = UserDefaults.standard.data(forKey: "workouts") {
-            do {
-                let decoder = JSONDecoder()
-                let encoder = JSONEncoder()
-
-                var workouts = try decoder.decode([Workout].self, from: data)
-                
-                workouts.append(workout)
-                
-                let data = try encoder.encode(workouts)
-                
-                UserDefaults.standard.set(data, forKey: "workouts")
-
-            } catch {
-                print("Unable to Decode Note (\(error))")
-            }
-        }else{
-            var workouts = [workout]
-            
-            do {
-                let encoder = JSONEncoder()
-
-                let data = try encoder.encode(workouts)
-                
-                UserDefaults.standard.set(data, forKey: "workouts")
-
-            } catch {
-                print("Unable to Encode Note (\(error))")
-            }
-        }
+        let workout = Workout(name: workoutName, exercises: workoutExercises)
+        _ = storage.addElementArray(storageKey: "workouts", element: workout)
     }
     
     
 }
 
-struct New_workout_Previews: PreviewProvider {
+struct AddWorkoutView_Previews: PreviewProvider {
     static var previews: some View {
-        New_workout()
+        AddWorkoutView()
     }
 }

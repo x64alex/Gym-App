@@ -1,6 +1,6 @@
 import SwiftUI
 
-struct Home: View {
+struct WorkoutHome: View {
     var numberWorkouts = 0
     @StateObject var viewModel: ViewModel
 
@@ -10,7 +10,7 @@ struct Home: View {
     var body: some View {
         NavigationView {
             VStack{
-                NavigationLink(destination: New_workout(),
+                NavigationLink(destination: AddWorkoutView(),
                                label: {
                     Text("Add workout")
                         .font(.system(size: 20, weight: .bold, design: .rounded))
@@ -18,11 +18,16 @@ struct Home: View {
                 List(0..<viewModel.workouts.count, id: \.self) { index in
                     NavigationLink(
                         destination: Workout_screen(viewModel: Workout_screen.ViewModel(workoutNumber: index)),
-//                        , isActive: isActive(index),
                         label: {
                             Text(viewModel.workouts[index].name)
                                 .font(.system(size: 20, weight: .bold, design: .rounded))
                         })
+                    .swipeActions {
+                        Button("Remove") {
+                            viewModel.deleteWorkout(index: index)
+                        }
+                        .tint(Colors.removeColor)
+                    }
                     
                 }
                 NavigationLink(destination: FinishedWorkouts(),

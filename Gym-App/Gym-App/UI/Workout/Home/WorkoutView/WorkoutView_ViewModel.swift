@@ -14,12 +14,9 @@ extension Workout_screen {
         func loadWorkout() {
             if let data = UserDefaults.standard.data(forKey: "workouts") {
                 do {
-                    // Create JSON Decoder
                     let decoder = JSONDecoder()
 
-                    // Decode Note
-                    let workouts = try decoder.decode([Workout].self, from: data)
-                    
+                    let workouts = try decoder.decode([Workout].self, from: data)                    
                     workout = workouts[workoutNumber]
 
                 } catch {

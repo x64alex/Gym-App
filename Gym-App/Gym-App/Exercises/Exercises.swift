@@ -1,9 +1,9 @@
 import SwiftUI
 
 struct Exercises: View {
-    
     @State var name: String = ""
-    
+    @EnvironmentObject private var storage: Storage
+
     
     var body: some View {
         VStack {
@@ -20,45 +20,7 @@ struct Exercises: View {
     
     
     func addExercise(){
-        var exercise = Exercise(name: name)
-        
-        if let data = UserDefaults.standard.data(forKey: "exercises") {
-            do {
-                // Create JSON Decoder
-                let decoder = JSONDecoder()
-                let encoder = JSONEncoder()
-
-                // Decode Note
-                var exercises = try decoder.decode([Exercise].self, from: data)
-                
-                exercises.append(exercise)
-                
-                let data = try encoder.encode(exercises)
-                
-                UserDefaults.standard.set(data, forKey: "exercises")
-
-            } catch {
-                print("Unable to Decode Note (\(error))")
-            }
-        }else{
-            var exercises = [exercise]
-            
-            do {
-                let encoder = JSONEncoder()
-
-                let data = try encoder.encode(exercises)
-                
-                UserDefaults.standard.set(data, forKey: "exercises")
-
-            } catch {
-                print("Unable to Encode Note (\(error))")
-            }
-        }
-    }
-}
-
-struct Exercises_Previews: PreviewProvider {
-    static var previews: some View {
-        Exercises()
+        let exercise = Exercise(name: name)
+        _ = storage.addElementArray(storageKey: "exercises", element: exercise)
     }
 }

@@ -11,7 +11,7 @@ extension WorkoutHome {
 
         
         func loadWorkouts() {
-            workouts = storage.getDataArray(storageKey: "workouts")
+            workouts = storage.getArray(storageKey: "workouts")
         }
         
         func deleteWorkout(index: Int){

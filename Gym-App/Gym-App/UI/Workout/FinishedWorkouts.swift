@@ -1,6 +1,7 @@
 import SwiftUI
 
 struct FinishedWorkouts: View {
+    @EnvironmentObject private var storage: Storage
     @State var workouts: [Workout] = []
     
     
@@ -14,18 +15,7 @@ struct FinishedWorkouts: View {
             }
         }
         .onAppear(){
-            if let data = UserDefaults.standard.data(forKey: "doneworkouts") {
-                do {
-                    // Create JSON Decoder
-                    let decoder = JSONDecoder()
-
-                    // Decode Note
-                    self.workouts = try decoder.decode([Workout].self, from: data)
-                    
-                } catch {
-                    print("Unable to Decode Note (\(error))")
-                }
-            }
+            self.workouts = storage.getArray(storageKey: "doneworkouts")
         }
     }
 }

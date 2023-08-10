@@ -6,7 +6,7 @@ struct ContentView: View {
     var body: some View {
         NavigationView {
             TabView(selection: $selection) {
-                Home()
+                Home(viewModel: Home.ViewModel())
                     .tabItem {
                         Image(systemName: "house.fill")
                         Text("Workouts")
@@ -27,8 +27,7 @@ struct ContentView: View {
                     }
                     .tag(1)
                 
-                Text("Video Tab")
-                    .font(.system(size: 30, weight: .bold, design: .rounded))
+                Exercises()
                     .tabItem {
                         Image(systemName: "video.circle.fill")
                         Text("Exercises")

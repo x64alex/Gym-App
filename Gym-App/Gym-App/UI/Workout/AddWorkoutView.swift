@@ -3,10 +3,10 @@ import SwiftUI
 struct AddWorkoutView: View {
     @EnvironmentObject private var storage: Storage
 
-    @State private var exerciseName = ""
+    @State private var exercise = Exercise(type: "", name: "", mainMuscleGroup: "")
     @State private var workoutName = ""
-    @State private var workoutExercises:[Exercise] = []
-    @State private var allExercisesNames:[String] = []
+    @State private var workoutExercises: [Exercise] = []
+    @State private var allExercises: [Exercise] = []
     
     @State var setsNumber: Int = 0
     
@@ -18,14 +18,14 @@ struct AddWorkoutView: View {
                 HStack(spacing: 0) {
                     Text(workoutExercises[workoutIndex].name)
                     Spacer()
-                    Text(workoutExercises[workoutIndex].getSets())
+                    Text(String(workoutExercises[workoutIndex].getSets()))
                 }.frame(height: 20)
             }.frame(height: CGFloat(workoutExercises.count)*20)
             
             VStack(spacing: 0) {
-                Picker(selection: $exerciseName, label: Text("Favorite Food")) {
-                    ForEach(allExercisesNames, id:\.self) { exercise in // <2>
-                        Text(exercise)
+                Picker(selection: $exercise, label: Text("Favorite Food")) {
+                    ForEach(allExercises, id:\.self) { exercise in // <2>
+                        Text(exercise.name)
                     }
                 }
                 
@@ -51,16 +51,15 @@ struct AddWorkoutView: View {
     }
     
     func getAllExercise(){
-        let exercises: [Exercise] = storage.getArray(storageKey: "exercises")
-        allExercisesNames = exercises.map{ (exercise) -> String in
-            return exercise.name
-        }
+        allExercises = storage.getArray(storageKey: "exercises")
+//        allExercisesNames = exercises.map{ (exercise) -> String in
+//            return exercise.name
+//        }
     }
     
     func addExercise(){
-        let newExercise = Exercise(sets: setsNumber, name: exerciseName)
-        newExercise.sets = setsNumber
-        workoutExercises.append(newExercise)
+        exercise.setSets(numberOfSets: setsNumber)
+        workoutExercises.append(exercise)
     }
     
     func addWorkout(){

@@ -2,21 +2,20 @@ import SwiftUI
 
 struct Exercises: View {
     @State var name: String = ""
+    @State private var searchText = ""
+
     @EnvironmentObject private var storage: Storage
     
     @State var exercises: [Exercise] = []
 
     
     var body: some View {
+        
         VStack(spacing:0){
-            List(0..<exercises.count, id: \.self) { index in
-                Text(exercises[index].name)
-    //            NavigationLink(
-    //                destination: Workout_screen(viewModel: Workout_screen.ViewModel(workoutNumber: index)),
-    //                label: {
-    //                    Text(viewModel.workouts[index].name)
-    //                        .font(.system(size: 20, weight: .bold, design: .rounded))
-    //                })
+            NavigationView {
+
+            List(0..<filteredExercises.count, id: \.self) { index in
+                Text(filteredExercises[index].name)
                 .swipeActions {
                     Button("Remove") {
                         self.deleteExercise(index: index)
@@ -25,19 +24,27 @@ struct Exercises: View {
                 }
                 
             }
+        }
+               .searchable(text: $searchText)
             
             NavigationLink(destination: AddExercise(),
                            label: {
                 Text("Add exercise")
                     .font(.system(size: 20, weight: .bold, design: .rounded))
             })
-            Text("exercise list")
         }
         .onAppear{
             exercises = storage.getArray(storageKey: "exercises")
         }
     }
     
+    var filteredExercises: [Exercise] {
+        if searchText.isEmpty {
+            return exercises
+        } else {
+            return exercises.filter { $0.name.contains(searchText) }
+        }
+    }
     
     func deleteExercise(index: Int) {
         exercises = storage.deleteElementAtIndex(storageKey: "exercises", index: index)

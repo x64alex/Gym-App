@@ -6,7 +6,7 @@ class Workout: Codable, CustomStringConvertible, Identifiable {
             var sets = ex.repetitions.reduce("") { partialResult, rep in
                 partialResult + " Repetitions: \(rep.reps) Weight: \(rep.weight)\n"
             }
-            return partialResult + ex.name + " " + String(ex.sets)+" sets \n"+sets+"\n\n"
+            return partialResult + ex.name + " " + String(ex.getSets())+" sets \n"+sets+"\n\n"
         }
         guard let date = self.date else{ return value}
         
@@ -31,7 +31,7 @@ class Workout: Codable, CustomStringConvertible, Identifiable {
     
     func getSets() -> Int {
         return exercises.reduce(0) { partialResult, ex in
-            partialResult+ex.sets
+            partialResult+ex.getSets()
         }
     }
     

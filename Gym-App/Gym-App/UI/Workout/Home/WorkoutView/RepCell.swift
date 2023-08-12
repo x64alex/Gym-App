@@ -1,10 +1,3 @@
-//
-//  RepCell.swift
-//  Gym-App
-//
-//  Created by acantor on 01.08.2023.
-//
-
 import SwiftUI
 
 struct RepCell: View {

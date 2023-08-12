@@ -6,19 +6,27 @@ class Exercise: Codable, Identifiable, Hashable {
     }
     
     var id = UUID()
-    var sets: Int
+    private var sets: Int
     var name: String
+    var type: String
+    var mainMuscleGroup: String
     var repetitions: [Repetition]
 
     
-    init(sets: Int = 0, name: String) {
+    init(sets: Int = 0, type: String, name: String, mainMuscleGroup: String) {
         self.sets = sets
+        self.type = type
         self.name = name
+        self.mainMuscleGroup = mainMuscleGroup
         self.repetitions = Array(repeating: Repetition(reps: 0, weight: 0), count: sets)
     }
     
-    func getSets() -> String {
-        return String(self.sets)
+    func getSets() -> Int {
+        return self.sets
+    }
+    func setSets(numberOfSets: Int) {
+        self.sets = numberOfSets
+        self.repetitions = Array(repeating: Repetition(reps: 0, weight: 0), count: numberOfSets)
     }
     
     func getRealExercise() -> RealExercise {

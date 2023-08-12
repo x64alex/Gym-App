@@ -28,6 +28,8 @@
 		AF147C232A853D6900095427 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF147C222A853D6900095427 /* ProfileView.swift */; };
 		AF147C252A853D9D00095427 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF147C242A853D9D00095427 /* Colors.swift */; };
 		AF147C282A8542A300095427 /* Storage.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF147C272A8542A300095427 /* Storage.swift */; };
+		AF147C2D2A8553BE00095427 /* AddExercise.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF147C2C2A8553BE00095427 /* AddExercise.swift */; };
+		AF147C302A8558A100095427 /* AppConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF147C2F2A8558A100095427 /* AppConstants.swift */; };
 		AF76DD652A7849CA0014A075 /* RealWorkout.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF76DD642A7849CA0014A075 /* RealWorkout.swift */; };
 		AF76DD672A784B3A0014A075 /* RealExercise.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF76DD662A784B3A0014A075 /* RealExercise.swift */; };
 		AF76DD692A784BA70014A075 /* Repetition.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF76DD682A784BA70014A075 /* Repetition.swift */; };
@@ -77,6 +79,8 @@
 		AF147C222A853D6900095427 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		AF147C242A853D9D00095427 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		AF147C272A8542A300095427 /* Storage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storage.swift; sourceTree = "<group>"; };
+		AF147C2C2A8553BE00095427 /* AddExercise.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddExercise.swift; sourceTree = "<group>"; };
+		AF147C2F2A8558A100095427 /* AppConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConstants.swift; sourceTree = "<group>"; };
 		AF76DD642A7849CA0014A075 /* RealWorkout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealWorkout.swift; sourceTree = "<group>"; };
 		AF76DD662A784B3A0014A075 /* RealExercise.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealExercise.swift; sourceTree = "<group>"; };
 		AF76DD682A784BA70014A075 /* Repetition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repetition.swift; sourceTree = "<group>"; };
@@ -220,6 +224,7 @@
 		AF147C1B2A853B2000095427 /* Exercises */ = {
 			isa = PBXGroup;
 			children = (
+				AF147C292A85537300095427 /* AddExercise */,
 				AF147C132A802A8800095427 /* Exercises.swift */,
 			);
 			name = Exercises;
@@ -240,6 +245,7 @@
 			children = (
 				AF147C0F2A7E92BD00095427 /* AppDelegate.swift */,
 				AF147C112A7E950000095427 /* AppState.swift */,
+				AF147C2F2A8558A100095427 /* AppConstants.swift */,
 				AF147C242A853D9D00095427 /* Colors.swift */,
 				AF147C272A8542A300095427 /* Storage.swift */,
 			);
@@ -255,6 +261,14 @@
 				13054B2329057D5E00BD1306 /* WorkoutView_ViewModel.swift */,
 			);
 			path = WorkoutView;
+			sourceTree = "<group>";
+		};
+		AF147C292A85537300095427 /* AddExercise */ = {
+			isa = PBXGroup;
+			children = (
+				AF147C2C2A8553BE00095427 /* AddExercise.swift */,
+			);
+			path = AddExercise;
 			sourceTree = "<group>";
 		};
 		AF76DD6A2A784C4E0014A075 /* Real */ = {
@@ -397,6 +411,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AF147C0E2A7E8F3E00095427 /* WorkoutHome_ViewModel.swift in Sources */,
+				AF147C2D2A8553BE00095427 /* AddExercise.swift in Sources */,
 				AF147C282A8542A300095427 /* Storage.swift in Sources */,
 				AF147C142A802A8800095427 /* Exercises.swift in Sources */,
 				13054B2429057D5E00BD1306 /* WorkoutView_ViewModel.swift in Sources */,
@@ -414,6 +429,7 @@
 				AF76DD672A784B3A0014A075 /* RealExercise.swift in Sources */,
 				13054B18290570A300BD1306 /* WorkoutHome.swift in Sources */,
 				13054B1A2905716500BD1306 /* AddWorkoutView.swift in Sources */,
+				AF147C302A8558A100095427 /* AppConstants.swift in Sources */,
 				AF76DD6C2A7859360014A075 /* RepCell.swift in Sources */,
 				13054B1629056D1500BD1306 /* WorkoutView.swift in Sources */,
 				13054B222905773A00BD1306 /* Exercise.swift in Sources */,

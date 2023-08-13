@@ -15,12 +15,12 @@ class Workout: Codable, CustomStringConvertible, Identifiable {
         dtFormatter.timeStyle = .short
 
         let formattedDateTime = dtFormatter.string(from: date)
-        return "Date: \(formattedDateTime)\n\n" + value
+        return "Date: \(formattedDateTime)\n" + "Duration: \(duration) seconds\n\n" + value
     }
     
     let id = UUID()
     var startDate: Date? = nil
-    var duration: Date? = nil
+    var duration: Int = 0
     
     var exercises: [Exercise] = []
     var name: String

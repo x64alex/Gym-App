@@ -37,6 +37,7 @@
 		AF76DD6E2A7866F00014A075 /* FinishedWorkouts.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF76DD6D2A7866F00014A075 /* FinishedWorkouts.swift */; };
 		AFC34D8C2A88C8E800F91C05 /* StartWorkoutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFC34D8B2A88C8E800F91C05 /* StartWorkoutView.swift */; };
 		AFC34D8E2A88C90200F91C05 /* StartWorkoutView_ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFC34D8D2A88C90200F91C05 /* StartWorkoutView_ViewModel.swift */; };
+		AFC34D912A890E7000F91C05 /* DateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFC34D902A890E7000F91C05 /* DateExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -90,6 +91,7 @@
 		AF76DD6D2A7866F00014A075 /* FinishedWorkouts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinishedWorkouts.swift; sourceTree = "<group>"; };
 		AFC34D8B2A88C8E800F91C05 /* StartWorkoutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartWorkoutView.swift; sourceTree = "<group>"; };
 		AFC34D8D2A88C90200F91C05 /* StartWorkoutView_ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartWorkoutView_ViewModel.swift; sourceTree = "<group>"; };
+		AFC34D902A890E7000F91C05 /* DateExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -247,6 +249,7 @@
 		AF147C1E2A853BAC00095427 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				AFC34D8F2A890E6200F91C05 /* Extensions */,
 				AF147C0F2A7E92BD00095427 /* AppDelegate.swift */,
 				AF147C112A7E950000095427 /* AppState.swift */,
 				AF147C2F2A8558A100095427 /* AppConstants.swift */,
@@ -293,6 +296,14 @@
 				AFC34D8D2A88C90200F91C05 /* StartWorkoutView_ViewModel.swift */,
 			);
 			path = StartWorkout;
+			sourceTree = "<group>";
+		};
+		AFC34D8F2A890E6200F91C05 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				AFC34D902A890E7000F91C05 /* DateExtension.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -446,6 +457,7 @@
 				13054B18290570A300BD1306 /* WorkoutHome.swift in Sources */,
 				13054B1A2905716500BD1306 /* AddWorkoutView.swift in Sources */,
 				AF147C302A8558A100095427 /* AppConstants.swift in Sources */,
+				AFC34D912A890E7000F91C05 /* DateExtension.swift in Sources */,
 				AF76DD6C2A7859360014A075 /* RepCell.swift in Sources */,
 				13054B1629056D1500BD1306 /* WorkoutView.swift in Sources */,
 				13054B222905773A00BD1306 /* Exercise.swift in Sources */,

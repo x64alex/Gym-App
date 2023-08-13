@@ -23,11 +23,14 @@ extension StartWorkoutView {
             
             self.workoutNumber = index
             self.storage = storage
+            
+            
+            workout.startDate = Date()
         }
         
         func next() {
             workout.exercises[exerciseIndex] = exercise
-            storage.updateElementAtIndex(storageKey: "workouts", index: workoutNumber, newElement: workout)
+            _ = storage.updateElementAtIndex(storageKey: "workouts", index: workoutNumber, newElement: workout)
             
             
             if(buttonText == "done"){
@@ -35,12 +38,6 @@ extension StartWorkoutView {
                     self?.updateCountdown()
                 }
                 timer?.fire()
-            }
-            else{
-                timer?.invalidate()
-                secondsRemaining = 61
-                buttonText = "done"
-                
                 
                 if(setIndex < exercise.getSets()){
                     setIndex += 1
@@ -57,6 +54,14 @@ extension StartWorkoutView {
                     }
                 }
             }
+            else{
+                timer?.invalidate()
+                secondsRemaining = 61
+                buttonText = "done"
+                
+                
+                
+            }
         }
         
         func saveWorkout() {
@@ -64,7 +69,7 @@ extension StartWorkoutView {
         }
         
         private func updateCountdown() {
-            if secondsRemaining > 0 {
+            if secondsRemaining > 1 {
                 secondsRemaining -= 1
                 buttonText = String(secondsRemaining)
             } else {

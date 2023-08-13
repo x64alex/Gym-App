@@ -190,8 +190,8 @@
             filePath = "Gym-App/UI/Workout/Home/WorkoutView/StartWorkout/StartWorkoutView_ViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "34"
-            endingLineNumber = "34"
+            startingLineNumber = "37"
+            endingLineNumber = "37"
             landmarkName = "next()"
             landmarkType = "7">
             <Locations>
@@ -238,8 +238,8 @@
             filePath = "Gym-App/UI/Workout/Home/WorkoutView/StartWorkout/StartWorkoutView_ViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "40"
-            endingLineNumber = "40"
+            startingLineNumber = "58"
+            endingLineNumber = "58"
             landmarkName = "next()"
             landmarkType = "7">
          </BreakpointContent>

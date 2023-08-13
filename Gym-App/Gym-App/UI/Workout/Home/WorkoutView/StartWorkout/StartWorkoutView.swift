@@ -52,6 +52,7 @@ struct StartWorkoutView: View {
                 .cornerRadius(30)
             } else{
                 Button("Finish") {
+                    viewModel.workout.duration = Int(Date() - (viewModel.workout.startDate ?? Date()))
                     _ = storage.addElementArray(storageKey: "doneworkouts", element: viewModel.workout)
                     presentationMode.wrappedValue.dismiss()
                 }

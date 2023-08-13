@@ -8,19 +8,20 @@ class Workout: Codable, CustomStringConvertible, Identifiable {
             }
             return partialResult + ex.name + " " + String(ex.getSets())+" sets \n"+sets+"\n\n"
         }
-        guard let date = self.date else{ return value}
+        guard let date = self.startDate else{ return value}
         
         let dtFormatter = DateFormatter()
         dtFormatter.dateStyle = .medium
         dtFormatter.timeStyle = .short
 
         let formattedDateTime = dtFormatter.string(from: date)
-        return "Date: \(formattedDateTime)\n\n" + value
+        return "Date: \(formattedDateTime)\n" + "Duration: \(duration) seconds\n\n" + value
     }
     
     let id = UUID()
-    var date: Date? = nil
-
+    var startDate: Date? = nil
+    var duration: Int = 0
+    
     var exercises: [Exercise] = []
     var name: String
     

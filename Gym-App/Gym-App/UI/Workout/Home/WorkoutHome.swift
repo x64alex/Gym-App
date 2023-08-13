@@ -3,6 +3,7 @@ import SwiftUI
 struct WorkoutHome: View {
     var numberWorkouts = 0
     @StateObject var viewModel: ViewModel
+    @EnvironmentObject private var storage: Storage
 
     @EnvironmentObject private var appState: AppState
     @SceneStorage("isDetailViewActive") private var isDetailViewActive: Bool = false
@@ -17,7 +18,7 @@ struct WorkoutHome: View {
                 })
                 List(0..<viewModel.workouts.count, id: \.self) { index in
                     NavigationLink(
-                        destination: Workout_screen(viewModel: Workout_screen.ViewModel(workoutNumber: index)),
+                        destination: Workout_screen(viewModel: Workout_screen.ViewModel(workoutNumber: index, storage: storage)),
                         label: {
                             Text(viewModel.workouts[index].name)
                                 .font(.system(size: 20, weight: .bold, design: .rounded))

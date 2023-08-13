@@ -25,13 +25,12 @@ struct AppTabView: View {
                         Text("Exercises")
                     }
                     .tag(2)
-                ProfileView()
-                    .font(.system(size: 30, weight: .bold, design: .rounded))
-                    .tabItem {
-                        Image(systemName: "person.crop.circle")
-                        Text("Profile")
-                    }
-                    .tag(3)
+//                ProfileView()
+//                    .tabItem {
+//                        Image(systemName: "person.crop.circle")
+//                        Text("Profile")
+//                    }
+//                    .tag(3)
             }
             .accentColor(Colors.TabBar.tint)
             .toolbarBackground(Colors.TabBar.bar, for: .tabBar)

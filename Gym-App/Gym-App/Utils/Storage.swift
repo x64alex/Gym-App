@@ -105,4 +105,25 @@ class Storage: ObservableObject {
         }
         return dataArray
     }
+    
+    func updateElementAtIndex<T: Codable>(storageKey: String, index: Int, newElement: T) -> [T]{
+        var dataArray:[T] = []
+        
+        if let data = UserDefaults.standard.data(forKey: storageKey) {
+            do {
+                let decoder = JSONDecoder()
+                let encoder = JSONEncoder()
+
+                dataArray = try decoder.decode([T].self, from: data)
+                if(index < dataArray.count){
+                    dataArray[index] = newElement
+                }
+                let data = try encoder.encode(dataArray)
+                UserDefaults.standard.set(data, forKey: storageKey)
+            } catch {
+                print("Unable to Decode Note (\(error))")
+            }
+        }
+        return dataArray
+    }
 }

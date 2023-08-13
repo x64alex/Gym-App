@@ -6,4 +6,6 @@ enum Colors {
         static let tint = Color.red
     }
     static let removeColor = Color.red
+    static let finishWorkout = Color.red
+
 }

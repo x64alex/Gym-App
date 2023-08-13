@@ -2,27 +2,18 @@ import SwiftUI
 
 extension Workout_screen {
     class ViewModel: ObservableObject {
+
         @Published var workout: Workout = Workout(name: "", exercises: [])
+        var storage: Storage
         var workoutNumber = 0;
         
-        init(workoutNumber: Int) {
+        init(workoutNumber: Int, storage: Storage) {
             self.workoutNumber = workoutNumber
+            self.storage = storage
         }
-                
-        
         
         func loadWorkout() {
-            if let data = UserDefaults.standard.data(forKey: "workouts") {
-                do {
-                    let decoder = JSONDecoder()
-
-                    let workouts = try decoder.decode([Workout].self, from: data)                    
-                    workout = workouts[workoutNumber]
-
-                } catch {
-                    print("Unable to Decode Note (\(error))")
-                }
-            }
+            workout = storage.getArray(storageKey: "workouts")[workoutNumber]
         }
     }
 }

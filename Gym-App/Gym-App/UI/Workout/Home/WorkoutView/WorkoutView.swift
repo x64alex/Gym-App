@@ -4,6 +4,7 @@ struct Workout_screen: View {
     @EnvironmentObject private var storage: Storage
     @StateObject var viewModel: ViewModel
     
+    
     @State private var currentId = 0
     
     var body: some View {
@@ -27,8 +28,8 @@ struct Workout_screen: View {
                         ForEach(0..<viewModel.workout.exercises[i].getSets(), id: \.self) { j in
                             HStack(alignment: .bottom, spacing: 0) {
                                 RepCell(
-                                    rep: $viewModel.workout.exercises[i].repetitions[0].reps,
-                                    weight: $viewModel.workout.exercises[i].repetitions[0].weight,
+                                    rep: $viewModel.workout.exercises[i].repetitions[j].reps,
+                                    weight: $viewModel.workout.exercises[i].repetitions[j].weight,
                                     setNumber: j+1
                                 )
                              }.padding(EdgeInsets(top: 2, leading: 2, bottom: 2, trailing: 2))
@@ -37,8 +38,13 @@ struct Workout_screen: View {
 
                 }
             }
+            NavigationLink(destination: StartWorkoutView(viewModel: StartWorkoutView.ViewModel(workout: viewModel.workout, index: viewModel.workoutNumber, storage: viewModel.storage)),
+                           label: {
+                Text("Start workout")
+                    .font(.system(size: 20, weight: .bold, design: .rounded))
+            })
             Button("Finish workout", action: {
-                viewModel.workout.date = Date()
+                viewModel.workout.startDate = Date()
                 _ = storage.addElementArray(storageKey: "doneworkouts", element: viewModel.workout)
             })
             .onAppear {

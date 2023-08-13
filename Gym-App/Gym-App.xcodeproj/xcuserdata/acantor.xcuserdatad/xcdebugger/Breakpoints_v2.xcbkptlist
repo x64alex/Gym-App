@@ -180,5 +180,69 @@
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "1C658421-4029-49C3-BD4E-077039A5045B"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Gym-App/UI/Workout/Home/WorkoutView/StartWorkout/StartWorkoutView_ViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "34"
+            endingLineNumber = "34"
+            landmarkName = "next()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "1C658421-4029-49C3-BD4E-077039A5045B - ebe71a512f7cd4ce"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Gym_App.StartWorkoutView.ViewModel.next() -&gt; ()"
+                  moduleName = "Gym-App"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/acantor/Documents/GitHub/Gym-App/Gym-App/Gym-App/UI/Workout/Home/WorkoutView/StartWorkout/StartWorkoutView_ViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "34"
+                  endingLineNumber = "34"
+                  offsetFromSymbolStart = "835">
+               </Location>
+               <Location
+                  uuid = "1C658421-4029-49C3-BD4E-077039A5045B - 3d02e18d68c0c7e"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 @Sendable (__C.NSTimer) -&gt; () in Gym_App.StartWorkoutView.ViewModel.next() -&gt; ()"
+                  moduleName = "Gym-App"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/acantor/Documents/GitHub/Gym-App/Gym-App/Gym-App/UI/Workout/Home/WorkoutView/StartWorkout/StartWorkoutView_ViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "34"
+                  endingLineNumber = "34"
+                  offsetFromSymbolStart = "62">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "2DB4EF08-7514-4919-ABCB-9BE6D193613D"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Gym-App/UI/Workout/Home/WorkoutView/StartWorkout/StartWorkoutView_ViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "40"
+            endingLineNumber = "40"
+            landmarkName = "next()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
    </Breakpoints>
 </Bucket>

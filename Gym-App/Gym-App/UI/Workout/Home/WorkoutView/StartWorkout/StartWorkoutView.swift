@@ -46,12 +46,16 @@ struct StartWorkoutView: View {
                 Button(viewModel.buttonText) {
                     viewModel.next()
                 }
+                .frame(width: 80, height: 80)
+                .foregroundColor(Color.white)
+                .background(Color.green)
+                .cornerRadius(30)
             } else{
                 Button("Finish") {
                     _ = storage.addElementArray(storageKey: "doneworkouts", element: viewModel.workout)
                     presentationMode.wrappedValue.dismiss()
                 }
-                .frame(width: 60, height: 60)
+                .frame(width: 80, height: 80)
                 .foregroundColor(Color.white)
                 .background(Colors.finishWorkout)
                 .cornerRadius(30)

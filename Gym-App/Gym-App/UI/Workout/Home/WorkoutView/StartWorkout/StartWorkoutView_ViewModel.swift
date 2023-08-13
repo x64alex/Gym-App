@@ -10,8 +10,11 @@ extension StartWorkoutView {
         
         private var workoutNumber: Int
         private var storage: Storage
+        @Published var secondsRemaining: Int = 61
+
         
         
+        private var timer: Timer?
         @Published var buttonText = "done"
 
         init(workout: Workout, index: Int, storage: Storage) {
@@ -26,24 +29,49 @@ extension StartWorkoutView {
             workout.exercises[exerciseIndex] = exercise
             storage.updateElementAtIndex(storageKey: "workouts", index: workoutNumber, newElement: workout)
             
-            if(setIndex < exercise.getSets()){
-                setIndex += 1
-            }
-            else {
-                if(exerciseIndex < workout.exercises.count - 1){
-                    setIndex = 1
-                    exerciseIndex += 1
-                    exercise = workout.exercises[exerciseIndex]
+            
+            if(buttonText == "done"){
+                timer = Timer.scheduledTimer(withTimeInterval: 1, repeats: true) { [weak self] _ in
+                    self?.updateCountdown()
                 }
-                else{
-                    finished = true
-                    print("Workout finished")
+                timer?.fire()
+            }
+            else{
+                timer?.invalidate()
+                secondsRemaining = 61
+                buttonText = "done"
+                
+                
+                if(setIndex < exercise.getSets()){
+                    setIndex += 1
+                }
+                else {
+                    if(exerciseIndex < workout.exercises.count - 1){
+                        setIndex = 1
+                        exerciseIndex += 1
+                        exercise = workout.exercises[exerciseIndex]
+                    }
+                    else{
+                        finished = true
+                        print("Workout finished")
+                    }
                 }
             }
         }
         
         func saveWorkout() {
             
+        }
+        
+        private func updateCountdown() {
+            if secondsRemaining > 0 {
+                secondsRemaining -= 1
+                buttonText = String(secondsRemaining)
+            } else {
+                timer?.invalidate()
+                secondsRemaining = 61
+                buttonText = "done"
+            }
         }
     }
 }

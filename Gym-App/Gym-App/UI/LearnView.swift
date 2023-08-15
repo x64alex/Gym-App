@@ -22,6 +22,11 @@ struct LearnView: View {
             Button("Add workouts") {
                 _ = storage.addElementArray(storageKey: "workouts", element: AppConstants.workouts[0])
             }
+            NavigationLink(destination: ListFinishedWorkouts(),
+                           label: {
+                Text("See list workouts")
+                    .font(.system(size: 20, weight: .bold, design: .rounded))
+            })
         }
     }
     

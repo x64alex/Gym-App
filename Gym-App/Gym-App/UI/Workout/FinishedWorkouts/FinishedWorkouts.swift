@@ -32,7 +32,26 @@ struct FinishedWorkouts: View {
             Spacer()
         }.onAppear {
             viewModel.loadWorkouts()
-        }
+        }.gesture(swipeGesture)
 
+    }
+    
+    var swipeGesture: some Gesture {
+        DragGesture(minimumDistance: 20, coordinateSpace: .local)
+            .onEnded { value in
+                if value.translation.width < 0 {
+                    self.changeDate(forward: true)
+                } else if value.translation.width > 0 {
+                    self.changeDate(forward: false)
+                }
+            }
+    }
+
+    
+    func changeDate(forward: Bool) {
+        let calendar = Calendar.current
+        var dateComponents = DateComponents()
+        dateComponents.day = forward ? 1 : -1
+        viewModel.selectedDate = calendar.date(byAdding: dateComponents, to: viewModel.selectedDate) ?? viewModel.selectedDate
     }
 }

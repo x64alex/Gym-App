@@ -33,9 +33,3 @@ struct RepCell: View {
         Text(" kg")
     }
 }
-
-//struct RepCell_Previews: PreviewProvider {
-//    static var previews: some View {
-//        RepCell()
-//    }
-//}

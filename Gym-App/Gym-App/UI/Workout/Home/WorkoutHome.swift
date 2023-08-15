@@ -31,13 +31,12 @@ struct WorkoutHome: View {
                     }
                     
                 }
-                NavigationLink(destination: FinishedWorkouts(),
+                NavigationLink(destination: FinishedWorkouts(viewModel: FinishedWorkouts.ViewModel(storage: storage)),
                                label: {
                     Text("See workouts")
                         .font(.system(size: 20, weight: .bold, design: .rounded))
                 })
-                
-                
+
             }
             .onAppear {
                 viewModel.loadWorkouts()

@@ -244,5 +244,116 @@
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "B59BD51A-1B4D-4DA8-B2EF-FA9D184BD552"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Gym-App/UI/Workout/FinishedWorkouts/FinishedWorkouts_ViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "19"
+            endingLineNumber = "19"
+            landmarkName = "loadWorkouts()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "B59BD51A-1B4D-4DA8-B2EF-FA9D184BD552 - aad9490d2b41471c"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Gym_App.FinishedWorkouts.ViewModel.loadWorkouts() -&gt; ()"
+                  moduleName = "Gym-App"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/acantor/Documents/GitHub/Gym-App/Gym-App/Gym-App/UI/Workout/FinishedWorkouts/FinishedWorkouts_ViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "19"
+                  endingLineNumber = "19"
+                  offsetFromSymbolStart = "268">
+               </Location>
+               <Location
+                  uuid = "B59BD51A-1B4D-4DA8-B2EF-FA9D184BD552 - 30697556fac3c0c8"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Gym_App.Workout) -&gt; () in Gym_App.FinishedWorkouts.ViewModel.loadWorkouts() -&gt; ()"
+                  moduleName = "Gym-App"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/acantor/Documents/GitHub/Gym-App/Gym-App/Gym-App/UI/Workout/FinishedWorkouts/FinishedWorkouts_ViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "20"
+                  endingLineNumber = "20"
+                  offsetFromSymbolStart = "195">
+               </Location>
+               <Location
+                  uuid = "B59BD51A-1B4D-4DA8-B2EF-FA9D184BD552 - aad9490d2b41471c"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Gym_App.FinishedWorkouts.ViewModel.loadWorkouts() -&gt; ()"
+                  moduleName = "Gym-App"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/acantor/Documents/GitHub/Gym-App/Gym-App/Gym-App/UI/Workout/FinishedWorkouts/FinishedWorkouts_ViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "19"
+                  endingLineNumber = "19"
+                  offsetFromSymbolStart = "236">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "ED379359-9ABE-49DA-BA87-9428F1A923CC"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Gym-App/UI/Workout/Home/WorkoutView/WorkoutView_ViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "16"
+            endingLineNumber = "16"
+            landmarkName = "loadWorkout()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "463512F9-1468-4388-A7E6-364D091B2FB8"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Gym-App/UI/Workout/Home/WorkoutHome_ViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "14"
+            endingLineNumber = "14"
+            landmarkName = "loadWorkouts()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "A62D7629-80DD-4907-9CF9-064F062D160E"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Gym-App/UI/Workout/Home/WorkoutHome_ViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "13"
+            endingLineNumber = "13"
+            landmarkName = "loadWorkouts()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
    </Breakpoints>
 </Bucket>

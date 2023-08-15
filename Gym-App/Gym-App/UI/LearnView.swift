@@ -5,7 +5,7 @@ struct LearnView: View {
 
     
     var body: some View {
-        VStack{
+        VStack(spacing:10){
             Text("Learn")
                 .font(.system(size: 30, weight: .bold, design: .rounded))
             Button("Clear workouts") {
@@ -19,6 +19,14 @@ struct LearnView: View {
                 UserDefaults.standard.removeObject(forKey: "exercises")
                 _ = storage.addArray(storageKey: "exercises", elements: AppConstants.exercises)
             }
+            Button("Add workouts") {
+                _ = storage.addElementArray(storageKey: "workouts", element: AppConstants.workouts[0])
+            }
+            NavigationLink(destination: ListFinishedWorkouts(),
+                           label: {
+                Text("See list workouts")
+                    .font(.system(size: 20, weight: .bold, design: .rounded))
+            })
         }
     }
     

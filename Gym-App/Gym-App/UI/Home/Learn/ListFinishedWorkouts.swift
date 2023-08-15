@@ -1,6 +1,6 @@
 import SwiftUI
 
-struct FinishedWorkouts: View {
+struct ListFinishedWorkouts: View {
     @EnvironmentObject private var storage: Storage
     @State var workouts: [Workout] = []
     
@@ -17,11 +17,5 @@ struct FinishedWorkouts: View {
         .onAppear(){
             self.workouts = storage.getArray(storageKey: "doneworkouts")
         }
-    }
-}
-
-struct FinishedWorkouts_Previews: PreviewProvider {
-    static var previews: some View {
-        FinishedWorkouts()
     }
 }

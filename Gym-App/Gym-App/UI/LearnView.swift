@@ -20,7 +20,9 @@ struct LearnView: View {
                 _ = storage.addArray(storageKey: "exercises", elements: AppConstants.exercises)
             }
             Button("Add workouts") {
-                _ = storage.addElementArray(storageKey: "workouts", element: AppConstants.workouts[0])
+                AppConstants.workouts.forEach { workout in
+                    _ = storage.addElementArray(storageKey: "workouts", element: workout)
+                }
             }
             NavigationLink(destination: ListFinishedWorkouts(),
                            label: {

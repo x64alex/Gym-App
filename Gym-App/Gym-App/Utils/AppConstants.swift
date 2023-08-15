@@ -39,7 +39,14 @@ enum AppConstants {
             Exercise(sets:4, type: "Strength", name: "Low Row", mainMuscleGroup: "Back"),
             Exercise(sets:3, type: "Strength", name: "Triangle Pull", mainMuscleGroup: "Back"),
             Exercise(sets:3, type: "Strength", name: "Hammer Curls", mainMuscleGroup: "Biceps")
+        ]),
+        Workout(name: "Benidorm abs", exercises: [
+            Exercise(sets: 4, type: "Strength", name: "Leg drops", mainMuscleGroup: "Abs"),
+            Exercise(sets: 4, type: "Strength", name: "Crunches", mainMuscleGroup: "Abs")
+        ]),
+        Workout(name: "Daily pushups", exercises: [
+            Exercise(sets: 3, type: "Strength", name: "Push Ups", mainMuscleGroup: "Chest"),
         ])
-    
+        
     ]
 }

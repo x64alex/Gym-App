@@ -126,4 +126,18 @@ class Storage: ObservableObject {
         }
         return dataArray
     }
+    
+    func getJSON(storageKey: String) -> String {
+        guard let data = UserDefaults.standard.data(forKey: storageKey) else{
+            return ""
+        }
+        
+        
+        if let jsonString = String(data: data, encoding: .utf8) {
+            return jsonString
+        } else {
+            return ""
+        }
+    }
+
 }

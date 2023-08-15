@@ -25,5 +25,21 @@ enum AppConstants {
         Exercise(type: "Strength", name: "Sit-ups", mainMuscleGroup: "Abs"),
         Exercise(type: "Strength", name: "Leg drops", mainMuscleGroup: "Abs"),
         
+        Exercise(type: "Strength", name: "Assisted pull ups", mainMuscleGroup: "Back"),
+        Exercise(type: "Strength", name: "Lat pulldowns", mainMuscleGroup: "Back"),
+        Exercise(type: "Strength", name: "Low Row", mainMuscleGroup: "Back"),
+        Exercise(type: "Strength", name: "Triangle Pull", mainMuscleGroup: "Back"),
+        Exercise(type: "Strength", name: "Hammer Curls", mainMuscleGroup: "Biceps")
+    ]
+    
+    static let workouts = [
+        Workout(name: "Back Training", exercises: [
+            Exercise(sets:3, type: "Strength", name: "Assisted pull ups", mainMuscleGroup: "Back"),
+            Exercise(sets:4, type: "Strength", name: "Lat pulldowns", mainMuscleGroup: "Back"),
+            Exercise(sets:4, type: "Strength", name: "Low Row", mainMuscleGroup: "Back"),
+            Exercise(sets:3, type: "Strength", name: "Triangle Pull", mainMuscleGroup: "Back"),
+            Exercise(sets:3, type: "Strength", name: "Hammer Curls", mainMuscleGroup: "Biceps")
+        ])
+    
     ]
 }

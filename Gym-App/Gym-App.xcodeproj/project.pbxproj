@@ -84,6 +84,7 @@
 		AF147C272A8542A300095427 /* Storage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storage.swift; sourceTree = "<group>"; };
 		AF147C2C2A8553BE00095427 /* AddExercise.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddExercise.swift; sourceTree = "<group>"; };
 		AF147C2F2A8558A100095427 /* AppConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConstants.swift; sourceTree = "<group>"; };
+		AF2E72212A8B5CC800536069 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		AF76DD642A7849CA0014A075 /* RealWorkout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealWorkout.swift; sourceTree = "<group>"; };
 		AF76DD662A784B3A0014A075 /* RealExercise.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealExercise.swift; sourceTree = "<group>"; };
 		AF76DD682A784BA70014A075 /* Repetition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repetition.swift; sourceTree = "<group>"; };
@@ -142,6 +143,7 @@
 		13054AE92905689D00BD1306 /* Gym-App */ = {
 			isa = PBXGroup;
 			children = (
+				AF2E72212A8B5CC800536069 /* Info.plist */,
 				13054AEE2905689E00BD1306 /* Assets.xcassets */,
 				AF147C1E2A853BAC00095427 /* Utils */,
 				13054B1F2905771500BD1306 /* Model */,
@@ -623,6 +625,7 @@
 				DEVELOPMENT_TEAM = S6R457336R;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Gym-App/Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -653,6 +656,7 @@
 				DEVELOPMENT_TEAM = S6R457336R;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Gym-App/Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

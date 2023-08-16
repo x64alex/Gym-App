@@ -46,6 +46,17 @@ struct AddWorkoutView: View {
         .padding(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 0))
         .onAppear {
             getAllExercise()
+            
+            let workouts: [Workout] = storage.getArray(storageKey: "doneworkouts")
+            let destination = UserDefaults(suiteName: "group.cantor.gym.shared")!
+            do{
+                let encoder = JSONEncoder()
+                let data = try encoder.encode(workouts)
+                destination.set(data, forKey: "doneworkouts")
+            }catch{
+                
+            }
+
         }
         
         

@@ -63,6 +63,19 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		AF97A02D2A8D2F3B005745F1 /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		13054AE72905689D00BD1306 /* Gym-App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Gym-App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		13054AEA2905689D00BD1306 /* Gym_AppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Gym_AppApp.swift; sourceTree = "<group>"; };
@@ -102,6 +115,8 @@
 		AF76DD682A784BA70014A075 /* Repetition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repetition.swift; sourceTree = "<group>"; };
 		AF76DD6B2A7859360014A075 /* RepCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepCell.swift; sourceTree = "<group>"; };
 		AF76DD6D2A7866F00014A075 /* ListFinishedWorkouts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListFinishedWorkouts.swift; sourceTree = "<group>"; };
+		AF97A01E2A8D2F3A005745F1 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
+		AF97A0202A8D2F3A005745F1 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
 		AFC34D8B2A88C8E800F91C05 /* StartWorkoutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartWorkoutView.swift; sourceTree = "<group>"; };
 		AFC34D8D2A88C90200F91C05 /* StartWorkoutView_ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartWorkoutView_ViewModel.swift; sourceTree = "<group>"; };
 		AFC34D902A890E7000F91C05 /* DateExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtension.swift; sourceTree = "<group>"; };
@@ -138,6 +153,7 @@
 				13054AE92905689D00BD1306 /* Gym-App */,
 				13054AFA2905689E00BD1306 /* Gym-AppTests */,
 				13054B042905689E00BD1306 /* Gym-AppUITests */,
+				AF97A01D2A8D2F3A005745F1 /* Frameworks */,
 				13054AE82905689D00BD1306 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -332,6 +348,15 @@
 			path = Real;
 			sourceTree = "<group>";
 		};
+		AF97A01D2A8D2F3A005745F1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				AF97A01E2A8D2F3A005745F1 /* WidgetKit.framework */,
+				AF97A0202A8D2F3A005745F1 /* SwiftUI.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		AFC34D8A2A88C8C700F91C05 /* StartWorkout */ = {
 			isa = PBXGroup;
 			children = (
@@ -360,6 +385,7 @@
 				13054AE32905689D00BD1306 /* Sources */,
 				13054AE42905689D00BD1306 /* Frameworks */,
 				13054AE52905689D00BD1306 /* Resources */,
+				AF97A02D2A8D2F3B005745F1 /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
@@ -413,7 +439,7 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastSwiftUpdateCheck = 1400;
+				LastSwiftUpdateCheck = 1430;
 				LastUpgradeCheck = 1400;
 				TargetAttributes = {
 					13054AE62905689D00BD1306 = {

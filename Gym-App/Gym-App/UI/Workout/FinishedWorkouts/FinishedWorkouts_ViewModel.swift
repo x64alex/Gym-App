@@ -1,5 +1,6 @@
 import Foundation
 import SharedFramework
+
 extension FinishedWorkouts {
     
     class ViewModel: ObservableObject {

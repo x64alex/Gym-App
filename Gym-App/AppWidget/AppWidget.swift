@@ -14,16 +14,19 @@ struct Provider: IntentTimelineProvider {
     }
 
     func getTimeline(for configuration: ConfigurationIntent, in context: Context, completion: @escaping (Timeline<Entry>) -> ()) {
-        //let storage = Storage()
-
         var entries: [WorkoutEntry] = []
 
+        let storage = WorkoutStorage()
+        
+        let workouts: [Workout] = storage.getArray(storageKey: "doneworkouts")
+        
+        let firstDayWeek = Date().getFirstDayWeek()
+        let weekDays: [Date: Int] = [:]
+        
+
         // Generate a timeline consisting of five entries an hour apart, starting from the current date.
-        let currentDate = Date()
-        for hourOffset in 0 ..< 5 {
-            let entryDate = Calendar.current.date(byAdding: .hour, value: hourOffset, to: currentDate)!
-            let entry = WorkoutEntry(date: entryDate, configuration: configuration, workoutTime: [])
-            entries.append(entry)
+        for weekDay in 0 ..< 7 {
+            
         }
 
         let timeline = Timeline(entries: entries, policy: .atEnd)
@@ -35,7 +38,8 @@ struct WorkoutEntry: TimelineEntry {
     let date: Date
     let configuration: ConfigurationIntent
     
-    let workoutTime: [String]
+    // workout time in order from monday to friday
+    let workoutTime: [Int]
 }
 
 struct AppWidgetEntryView : View {

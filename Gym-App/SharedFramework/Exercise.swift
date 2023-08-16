@@ -1,19 +1,19 @@
 import Foundation
 
-class Exercise: Codable, Identifiable, Hashable {
-    static func == (lhs: Exercise, rhs: Exercise) -> Bool {
+public class Exercise: Codable, Identifiable, Hashable {
+    public static func == (lhs: Exercise, rhs: Exercise) -> Bool {
         return lhs.id == rhs.id
     }
     
-    var id = UUID()
+    public var id = UUID()
     private var sets: Int
-    var name: String
-    var type: String
-    var mainMuscleGroup: String
-    var repetitions: [Repetition]
+    public var name: String
+    public var type: String
+    public var mainMuscleGroup: String
+    public var repetitions: [Repetition]
 
     
-    init(sets: Int = 0, type: String, name: String, mainMuscleGroup: String) {
+    public init(sets: Int = 0, type: String, name: String, mainMuscleGroup: String) {
         self.sets = sets
         self.type = type
         self.name = name
@@ -21,20 +21,16 @@ class Exercise: Codable, Identifiable, Hashable {
         self.repetitions = Array(repeating: Repetition(reps: 0, weight: 0), count: sets)
     }
     
-    func getSets() -> Int {
+    public func getSets() -> Int {
         return self.sets
     }
-    func setSets(numberOfSets: Int) {
+    public func setSets(numberOfSets: Int) {
         self.sets = numberOfSets
         self.repetitions = Array(repeating: Repetition(reps: 0, weight: 0), count: numberOfSets)
     }
     
-    func getRealExercise() -> RealExercise {
-        return RealExercise(repetitions: Array(repeating: Repetition(reps: 0, weight: 0), count: sets), name: name)
-    }
-    
     // Implement the hash(into:) method
-    func hash(into hasher: inout Hasher) {
+    public func hash(into hasher: inout Hasher) {
         // Combine the hash values of the properties you want to use for comparison.
         hasher.combine(id)
         hasher.combine(sets)

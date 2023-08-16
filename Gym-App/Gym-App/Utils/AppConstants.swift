@@ -1,4 +1,5 @@
 import Foundation
+import SharedFramework
 
 enum AppConstants {
     static let exerciseTypes = [

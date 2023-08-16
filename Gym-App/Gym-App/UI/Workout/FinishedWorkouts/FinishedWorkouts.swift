@@ -1,9 +1,10 @@
 import SwiftUI
+import SharedFramework
 
 struct FinishedWorkouts: View {
     @StateObject var viewModel: ViewModel
 
-    @EnvironmentObject private var storage: Storage
+    @EnvironmentObject private var storage: WorkoutStorage
 
 
     

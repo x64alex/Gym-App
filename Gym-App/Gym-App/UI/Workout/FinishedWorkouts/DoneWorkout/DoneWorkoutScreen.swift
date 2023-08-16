@@ -1,6 +1,7 @@
 import SwiftUI
+import SharedFramework
 struct DoneWorkoutScreen: View {
-    @EnvironmentObject private var storage: Storage
+    @EnvironmentObject private var storage: WorkoutStorage
     @StateObject var viewModel: ViewModel
     
     

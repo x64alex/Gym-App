@@ -1,10 +1,11 @@
 import SwiftUI
+import SharedFramework
 
 struct Exercises: View {
     @State var name: String = ""
     @State private var searchText = ""
 
-    @EnvironmentObject private var storage: Storage
+    @EnvironmentObject private var storage: WorkoutStorage
     
     @State var exercises: [Exercise] = []
 

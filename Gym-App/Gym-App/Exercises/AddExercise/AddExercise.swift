@@ -1,4 +1,5 @@
 import SwiftUI
+import SharedFramework
 
 struct AddExercise: View {
     @State var name: String = ""
@@ -7,7 +8,7 @@ struct AddExercise: View {
 
     @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
 
-    @EnvironmentObject private var storage: Storage
+    @EnvironmentObject private var storage: WorkoutStorage
 
     
     var body: some View {

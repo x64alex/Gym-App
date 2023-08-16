@@ -1,7 +1,8 @@
 import SwiftUI
+import SharedFramework
 
 struct AddWorkoutView: View {
-    @EnvironmentObject private var storage: Storage
+    @EnvironmentObject private var storage: WorkoutStorage
 
     @State private var exercise = Exercise(type: "", name: "", mainMuscleGroup: "")
     @State private var workoutName = ""

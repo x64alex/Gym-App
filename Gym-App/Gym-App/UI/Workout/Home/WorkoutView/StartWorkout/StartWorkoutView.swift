@@ -67,5 +67,11 @@ struct StartWorkoutView: View {
             Spacer().frame(height: 20)
             
         }
+        .onAppear {
+            // Subscribe to scenePhase changes
+            NotificationCenter.default.addObserver(forName: UIApplication.didBecomeActiveNotification, object: nil, queue: nil) { _ in
+                viewModel.updateTimer()
+            }
+        }
     }
 }

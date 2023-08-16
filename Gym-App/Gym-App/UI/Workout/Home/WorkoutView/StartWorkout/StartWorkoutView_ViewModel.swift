@@ -11,8 +11,10 @@ extension StartWorkoutView {
         private var workoutNumber: Int
         private var storage: Storage
         @Published var secondsRemaining: Int = 61
+        private var notificationManager = NotificationManager()
 
-        
+
+        private var starTimerDate: Date = Date()
         
         private var timer: Timer?
         @Published var buttonText = "done"
@@ -26,6 +28,7 @@ extension StartWorkoutView {
             
             
             workout.startDate = Date()
+            notificationManager.requestAuthorization()
         }
         
         func next() {
@@ -34,6 +37,10 @@ extension StartWorkoutView {
             
             
             if(buttonText == "done"){
+                notificationManager.scheduleNotification(notificationTitle: "Break over!", notificationBody: "Your break is over get back to work", timeInterval: 60)
+                
+                starTimerDate = Date()
+                
                 timer = Timer.scheduledTimer(withTimeInterval: 1, repeats: true) { [weak self] _ in
                     self?.updateCountdown()
                 }
@@ -58,9 +65,6 @@ extension StartWorkoutView {
                 timer?.invalidate()
                 secondsRemaining = 61
                 buttonText = "done"
-                
-                
-                
             }
         }
         
@@ -77,6 +81,12 @@ extension StartWorkoutView {
                 secondsRemaining = 61
                 buttonText = "done"
             }
+        }
+        
+        func updateTimer() {
+            let timeInterval = Int(Date() - starTimerDate)
+            secondsRemaining = 60 - timeInterval
+            updateCountdown()
         }
     }
 }

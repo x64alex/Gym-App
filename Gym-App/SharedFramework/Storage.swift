@@ -2,11 +2,15 @@ import SwiftUI
 
 public class WorkoutStorage: ObservableObject {
     
-    public init(){}
+    let sharedDefaults: UserDefaults
+    
+    public init(){
+        sharedDefaults = UserDefaults(suiteName: "group.cantor.gym.shared")!
+    }
     
     public func addElementArray<T: Codable>(storageKey: String, element: T) -> Bool{
         
-        if let data = UserDefaults.standard.data(forKey: storageKey) {
+        if let data = sharedDefaults.data(forKey: storageKey) {
             do {
                 // Create JSON Decoder
                 let decoder = JSONDecoder()
@@ -16,7 +20,7 @@ public class WorkoutStorage: ObservableObject {
                 dataArray.append(element)
                 
                 let data = try encoder.encode(dataArray)
-                UserDefaults.standard.set(data, forKey: storageKey)
+                sharedDefaults.set(data, forKey: storageKey)
                 
                 return true
             } catch {
@@ -28,7 +32,7 @@ public class WorkoutStorage: ObservableObject {
             do {
                 let encoder = JSONEncoder()
                 let data = try encoder.encode(dataArray)
-                UserDefaults.standard.set(data, forKey: storageKey)
+                sharedDefaults.set(data, forKey: storageKey)
                 
                 return true
             } catch {
@@ -40,7 +44,7 @@ public class WorkoutStorage: ObservableObject {
     
     public func addArray<T: Codable>(storageKey: String, elements: [T]) -> Bool{
         
-        if let data = UserDefaults.standard.data(forKey: storageKey) {
+        if let data = sharedDefaults.data(forKey: storageKey) {
             do {
                 // Create JSON Decoder
                 let decoder = JSONDecoder()
@@ -50,7 +54,7 @@ public class WorkoutStorage: ObservableObject {
                 dataArray.append(contentsOf: elements)
             
                 let data = try encoder.encode(dataArray)
-                UserDefaults.standard.set(data, forKey: storageKey)
+                sharedDefaults.set(data, forKey: storageKey)
                 
                 return true
             } catch {
@@ -62,7 +66,7 @@ public class WorkoutStorage: ObservableObject {
             do {
                 let encoder = JSONEncoder()
                 let data = try encoder.encode(dataArray)
-                UserDefaults.standard.set(data, forKey: storageKey)
+                sharedDefaults.set(data, forKey: storageKey)
                 
                 return true
             } catch {
@@ -76,7 +80,7 @@ public class WorkoutStorage: ObservableObject {
     public func getArray<T: Decodable>(storageKey: String) -> [T]{
         var dataArray:[T] = []
         
-        if let data = UserDefaults.standard.data(forKey: storageKey) {
+        if let data = sharedDefaults.data(forKey: storageKey) {
             do {
                 let decoder = JSONDecoder()
                 dataArray = try decoder.decode([T].self, from: data)
@@ -91,7 +95,7 @@ public class WorkoutStorage: ObservableObject {
     public func deleteElementAtIndex<T: Codable>(storageKey: String, index: Int) -> [T]{
         var dataArray:[T] = []
         
-        if let data = UserDefaults.standard.data(forKey: storageKey) {
+        if let data = sharedDefaults.data(forKey: storageKey) {
             do {
                 let decoder = JSONDecoder()
                 let encoder = JSONEncoder()
@@ -100,7 +104,7 @@ public class WorkoutStorage: ObservableObject {
                 dataArray.remove(at: index)
                 
                 let data = try encoder.encode(dataArray)
-                UserDefaults.standard.set(data, forKey: storageKey)
+                sharedDefaults.set(data, forKey: storageKey)
             } catch {
                 print("Unable to Decode Note (\(error))")
             }
@@ -111,7 +115,7 @@ public class WorkoutStorage: ObservableObject {
     public func updateElementAtIndex<T: Codable>(storageKey: String, index: Int, newElement: T) -> [T]{
         var dataArray:[T] = []
         
-        if let data = UserDefaults.standard.data(forKey: storageKey) {
+        if let data = sharedDefaults.data(forKey: storageKey) {
             do {
                 let decoder = JSONDecoder()
                 let encoder = JSONEncoder()
@@ -121,7 +125,7 @@ public class WorkoutStorage: ObservableObject {
                     dataArray[index] = newElement
                 }
                 let data = try encoder.encode(dataArray)
-                UserDefaults.standard.set(data, forKey: storageKey)
+                sharedDefaults.set(data, forKey: storageKey)
             } catch {
                 print("Unable to Decode Note (\(error))")
             }
@@ -130,7 +134,7 @@ public class WorkoutStorage: ObservableObject {
     }
     
     public func getJSON(storageKey: String) -> String {
-        guard let data = UserDefaults.standard.data(forKey: storageKey) else{
+        guard let data = sharedDefaults.data(forKey: storageKey) else{
             return ""
         }
         

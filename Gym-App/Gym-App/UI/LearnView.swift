@@ -1,7 +1,8 @@
 import SwiftUI
+import SharedFramework
 
 struct LearnView: View {
-    @EnvironmentObject private var storage: Storage
+    @EnvironmentObject private var storage: WorkoutStorage
 
     
     var body: some View {

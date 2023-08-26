@@ -1,8 +1,9 @@
 import SwiftUI
+import SharedFramework
 
 struct AppTabView: View {
     @State private var selection = 0
-    @EnvironmentObject private var storage: Storage
+    @EnvironmentObject private var storage: WorkoutStorage
 
     var body: some View {
         NavigationView {

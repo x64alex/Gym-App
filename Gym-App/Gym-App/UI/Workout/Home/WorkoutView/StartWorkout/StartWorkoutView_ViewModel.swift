@@ -1,4 +1,5 @@
 import Foundation
+import SharedFramework
 
 extension StartWorkoutView {
     class ViewModel: ObservableObject {
@@ -9,7 +10,7 @@ extension StartWorkoutView {
         @Published var finished = false
         
         private var workoutNumber: Int
-        private var storage: Storage
+        private var storage: WorkoutStorage
         @Published var secondsRemaining: Int = 61
         private var notificationManager = NotificationManager()
 
@@ -19,7 +20,7 @@ extension StartWorkoutView {
         private var timer: Timer?
         @Published var buttonText = "done"
 
-        init(workout: Workout, index: Int, storage: Storage) {
+        init(workout: Workout, index: Int, storage: WorkoutStorage) {
             self.workout = workout
             exercise = workout.exercises[exerciseIndex]
             

@@ -1,8 +1,10 @@
 import Foundation
+import SharedFramework
+
 extension FinishedWorkouts {
     
     class ViewModel: ObservableObject {
-        private var storage: Storage
+        private var storage: WorkoutStorage
         @Published var workouts: [Workout] = []
         @Published var selectedDate: Date = Date() {
             didSet {
@@ -10,7 +12,7 @@ extension FinishedWorkouts {
             }
         }
         
-        init(storage: Storage) {
+        init(storage: WorkoutStorage) {
             self.storage = storage
         }
 

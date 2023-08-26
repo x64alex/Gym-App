@@ -174,8 +174,8 @@
             filePath = "Gym-App/UI/Workout/AddWorkoutView.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "55"
-            endingLineNumber = "55"
+            startingLineNumber = "67"
+            endingLineNumber = "67"
             landmarkName = "getAllExercise()"
             landmarkType = "7">
          </BreakpointContent>
@@ -190,8 +190,8 @@
             filePath = "Gym-App/UI/Workout/Home/WorkoutView/StartWorkout/StartWorkoutView_ViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "44"
-            endingLineNumber = "44"
+            startingLineNumber = "45"
+            endingLineNumber = "45"
             landmarkName = "next()"
             landmarkType = "7">
             <Locations>
@@ -238,8 +238,8 @@
             filePath = "Gym-App/UI/Workout/Home/WorkoutView/StartWorkout/StartWorkoutView_ViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "65"
-            endingLineNumber = "65"
+            startingLineNumber = "66"
+            endingLineNumber = "66"
             landmarkName = "next()"
             landmarkType = "7">
          </BreakpointContent>
@@ -254,8 +254,8 @@
             filePath = "Gym-App/UI/Workout/FinishedWorkouts/FinishedWorkouts_ViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "19"
-            endingLineNumber = "19"
+            startingLineNumber = "21"
+            endingLineNumber = "21"
             landmarkName = "loadWorkouts()"
             landmarkType = "7">
             <Locations>
@@ -317,8 +317,8 @@
             filePath = "Gym-App/UI/Workout/Home/WorkoutView/WorkoutView_ViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "16"
-            endingLineNumber = "16"
+            startingLineNumber = "17"
+            endingLineNumber = "17"
             landmarkName = "loadWorkout()"
             landmarkType = "7">
          </BreakpointContent>
@@ -327,6 +327,22 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "463512F9-1468-4388-A7E6-364D091B2FB8"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Gym-App/UI/Workout/Home/WorkoutHome_ViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "15"
+            endingLineNumber = "15"
+            landmarkName = "loadWorkouts()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "A62D7629-80DD-4907-9CF9-064F062D160E"
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
@@ -342,22 +358,6 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "A62D7629-80DD-4907-9CF9-064F062D160E"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Gym-App/UI/Workout/Home/WorkoutHome_ViewModel.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "13"
-            endingLineNumber = "13"
-            landmarkName = "loadWorkouts()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             uuid = "9A4B999B-86AF-4CB3-B1E1-53303FF8FFE2"
             shouldBeEnabled = "No"
             ignoreCount = "0"
@@ -365,8 +365,8 @@
             filePath = "Gym-App/UI/Workout/Home/WorkoutView/StartWorkout/StartWorkoutView_ViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "42"
-            endingLineNumber = "42"
+            startingLineNumber = "43"
+            endingLineNumber = "43"
             landmarkName = "next()"
             landmarkType = "7">
          </BreakpointContent>
@@ -375,6 +375,22 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "4053D9E3-E430-4D79-9798-9DCB5E32A619"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Gym-App/UI/Workout/Home/WorkoutView/StartWorkout/StartWorkoutView_ViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "89"
+            endingLineNumber = "89"
+            landmarkName = "updateTimer()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "0DF3684B-9663-4255-8DAE-C407DC4299EE"
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
@@ -390,17 +406,495 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "0DF3684B-9663-4255-8DAE-C407DC4299EE"
+            uuid = "EC211444-22E5-49B8-8147-BB44B123AF1B"
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Gym-App/UI/Workout/Home/WorkoutView/StartWorkout/StartWorkoutView_ViewModel.swift"
+            filePath = "AppWidget/AppWidget.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "87"
-            endingLineNumber = "87"
-            landmarkName = "updateTimer()"
+            startingLineNumber = "34"
+            endingLineNumber = "34"
+            landmarkName = "getTimeline(for:in:completion:)"
             landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "FE8127EC-8D32-4148-93C4-BA13503B510E"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "AppWidget/AppWidget.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "30"
+            endingLineNumber = "30"
+            landmarkName = "getTimeline(for:in:completion:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "C626CEF5-6A57-4555-8BF6-4CAB9F725CCB"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "AppWidget/AppWidget.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "28"
+            endingLineNumber = "28"
+            landmarkName = "getTimeline(for:in:completion:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "13895BD9-08E5-4997-9ECC-505B85C1E37A"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "AppWidget/AppWidget.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "28"
+            endingLineNumber = "28"
+            landmarkName = "getTimeline(for:in:completion:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "0ED1F371-4616-4071-B77A-D02A1526ADE6"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "AppWidget/AppWidget.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "26"
+            endingLineNumber = "26"
+            landmarkName = "getTimeline(for:in:completion:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "ECAE2161-E75A-486B-94F9-3656B66429C8"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "AppWidget/AppWidget.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "27"
+            endingLineNumber = "27"
+            landmarkName = "getTimeline(for:in:completion:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "6D973870-476A-40F6-B866-0612570B90C4"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "AppWidget/AppWidget.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "66"
+            endingLineNumber = "66"
+            landmarkName = "getTimeline(for:in:completion:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "AD6B3B2A-5FE2-47FE-A965-55843027177D"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Gym-App/UI/Workout/AddWorkoutView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "49"
+            endingLineNumber = "49"
+            landmarkName = "body"
+            landmarkType = "24">
+            <Locations>
+               <Location
+                  uuid = "AD6B3B2A-5FE2-47FE-A965-55843027177D - e4ca2f37662e3614"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #2 () -&gt; () in Gym_App.AddWorkoutView.body.getter : some"
+                  moduleName = "Gym-App"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/acantor/Documents/GitHub/Gym-App/Gym-App/Gym-App/UI/Workout/AddWorkoutView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "49"
+                  endingLineNumber = "49"
+                  offsetFromSymbolStart = "27">
+               </Location>
+               <Location
+                  uuid = "AD6B3B2A-5FE2-47FE-A965-55843027177D - e4ca2f37662e36f5"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #2 () -&gt; () in Gym_App.AddWorkoutView.body.getter : some"
+                  moduleName = "Gym-App"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/acantor/Documents/GitHub/Gym-App/Gym-App/Gym-App/UI/Workout/AddWorkoutView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "50"
+                  endingLineNumber = "50"
+                  offsetFromSymbolStart = "116">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "58A7DC4C-0E7E-4D74-840F-DDAC8022B0E0"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "AppWidget/AppWidget.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "60"
+            endingLineNumber = "60"
+            landmarkName = "getTimeline(for:in:completion:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "E2461C86-625F-4037-A2F9-90E075C0E2FB"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "AppWidget/AppWidget.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "44"
+            endingLineNumber = "44"
+            landmarkName = "getTimeline(for:in:completion:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "E2461C86-625F-4037-A2F9-90E075C0E2FB - adf1a09f3a6debfb"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "AppWidgetExtension.Provider.getTimeline(for: AppWidgetExtension.ConfigurationIntent, in: WidgetKit.TimelineProviderContext, completion: (WidgetKit.Timeline&lt;AppWidgetExtension.WorkoutEntry&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "AppWidgetExtension"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/acantor/Documents/GitHub/Gym-App/Gym-App/AppWidget/AppWidget.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "35"
+                  endingLineNumber = "35"
+                  offsetFromSymbolStart = "2288">
+               </Location>
+               <Location
+                  uuid = "E2461C86-625F-4037-A2F9-90E075C0E2FB - adf1a09f3a6debfb"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "AppWidgetExtension.Provider.getTimeline(for: AppWidgetExtension.ConfigurationIntent, in: WidgetKit.TimelineProviderContext, completion: (WidgetKit.Timeline&lt;AppWidgetExtension.WorkoutEntry&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "AppWidgetExtension"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/acantor/Documents/GitHub/Gym-App/Gym-App/AppWidget/AppWidget.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "35"
+                  endingLineNumber = "35"
+                  offsetFromSymbolStart = "2300">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "E825B7C2-F202-4236-944F-B7DDF8B237E8"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "AppWidget/AppWidget.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "41"
+            endingLineNumber = "41"
+            landmarkName = "getTimeline(for:in:completion:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "61E89A97-2440-4D2C-ACEC-DC6EB0E663A9"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "AppWidget/AppWidget.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "59"
+            endingLineNumber = "59"
+            landmarkName = "getTimeline(for:in:completion:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "61E89A97-2440-4D2C-ACEC-DC6EB0E663A9 - adf1a09f3a6dea21"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "AppWidgetExtension.Provider.getTimeline(for: AppWidgetExtension.ConfigurationIntent, in: WidgetKit.TimelineProviderContext, completion: (WidgetKit.Timeline&lt;AppWidgetExtension.WorkoutEntry&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "AppWidgetExtension"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/acantor/Documents/GitHub/Gym-App/Gym-App/AppWidget/AppWidget.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "45"
+                  endingLineNumber = "45"
+                  offsetFromSymbolStart = "3324">
+               </Location>
+               <Location
+                  uuid = "61E89A97-2440-4D2C-ACEC-DC6EB0E663A9 - adf1a09f3a6de5ad"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "AppWidgetExtension.Provider.getTimeline(for: AppWidgetExtension.ConfigurationIntent, in: WidgetKit.TimelineProviderContext, completion: (WidgetKit.Timeline&lt;AppWidgetExtension.WorkoutEntry&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "AppWidgetExtension"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/acantor/Documents/GitHub/Gym-App/Gym-App/AppWidget/AppWidget.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "49"
+                  endingLineNumber = "49"
+                  offsetFromSymbolStart = "3484">
+               </Location>
+               <Location
+                  uuid = "61E89A97-2440-4D2C-ACEC-DC6EB0E663A9 - adf1a09f3a6de495"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "AppWidgetExtension.Provider.getTimeline(for: AppWidgetExtension.ConfigurationIntent, in: WidgetKit.TimelineProviderContext, completion: (WidgetKit.Timeline&lt;AppWidgetExtension.WorkoutEntry&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "AppWidgetExtension"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/acantor/Documents/GitHub/Gym-App/Gym-App/AppWidget/AppWidget.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "57"
+                  endingLineNumber = "57"
+                  offsetFromSymbolStart = "3772">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "268FFAB6-C852-4B49-8E2D-74CD53272398"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "AppWidget/AppWidget.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "123"
+            endingLineNumber = "123"
+            landmarkName = "body"
+            landmarkType = "24">
+            <Locations>
+               <Location
+                  uuid = "268FFAB6-C852-4B49-8E2D-74CD53272398 - def098d06d74f86a"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (SwiftUI.GeometryProxy) -&gt; SwiftUI._ConditionalContent&lt;SwiftUI.Text, &lt;&lt;opaque return type of SwiftUI.View.frame(width: Swift.Optional&lt;CoreGraphics.CGFloat&gt;, height: Swift.Optional&lt;CoreGraphics.CGFloat&gt;, alignment: SwiftUI.Alignment) -&gt; some&gt;&gt;.0&gt; in AppWidgetExtension.AppWidgetEntryView.body.getter : some"
+                  moduleName = "AppWidgetExtension"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/acantor/Documents/GitHub/Gym-App/Gym-App/AppWidget/AppWidget.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "75"
+                  endingLineNumber = "75"
+                  offsetFromSymbolStart = "940">
+               </Location>
+               <Location
+                  uuid = "268FFAB6-C852-4B49-8E2D-74CD53272398 - f74c9d10461af899"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (SwiftUI.GeometryProxy) -&gt; SwiftUI._ConditionalContent&lt;&lt;&lt;opaque return type of SwiftUI.View.frame(width: Swift.Optional&lt;CoreGraphics.CGFloat&gt;, height: Swift.Optional&lt;CoreGraphics.CGFloat&gt;, alignment: SwiftUI.Alignment) -&gt; some&gt;&gt;.0, &lt;&lt;opaque return type of SwiftUI.View.frame(width: Swift.Optional&lt;CoreGraphics.CGFloat&gt;, height: Swift.Optional&lt;CoreGraphics.CGFloat&gt;, alignment: SwiftUI.Alignment) -&gt; some&gt;&gt;.0&gt; in AppWidgetExtension.AppWidgetEntryView.body.getter : some"
+                  moduleName = "AppWidgetExtension"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/acantor/Documents/GitHub/Gym-App/Gym-App/AppWidget/AppWidget.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "75"
+                  endingLineNumber = "75"
+                  offsetFromSymbolStart = "760">
+               </Location>
+               <Location
+                  uuid = "268FFAB6-C852-4B49-8E2D-74CD53272398 - 8764554ceff8b920"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; SwiftUI.TupleView&lt;(SwiftUI.Spacer, &lt;&lt;opaque return type of SwiftUI.View.frame(width: Swift.Optional&lt;CoreGraphics.CGFloat&gt;, height: Swift.Optional&lt;CoreGraphics.CGFloat&gt;, alignment: SwiftUI.Alignment) -&gt; some&gt;&gt;.0)&gt; in closure #1 (SwiftUI.GeometryProxy) -&gt; SwiftUI._ConditionalContent&lt;&lt;&lt;opaque return type of SwiftUI.View.frame(width: Swift.Optional&lt;CoreGraphics.CGFloat&gt;, height: Swift.Optional&lt;CoreGraphics.CGFloat&gt;, alignment: SwiftUI.Alignment) -&gt; some&gt;&gt;.0, &lt;&lt;opaque return type of SwiftUI.View.frame(width: Swift.Optional&lt;CoreGraphics.CGFloat&gt;, height: Swift.Optional&lt;CoreGraphics.CGFloat&gt;, alignment: SwiftUI.Alignment) -&gt; some&gt;&gt;.0&gt; in AppWidgetExtension.AppWidgetEntryView.body.getter : some"
+                  moduleName = "AppWidgetExtension"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/acantor/Documents/GitHub/Gym-App/Gym-App/AppWidget/AppWidget.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "76"
+                  endingLineNumber = "76"
+                  offsetFromSymbolStart = "536">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "BAEF4FBE-D2EE-4F5E-82D7-B1D8EC80EC77"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "AppWidget/AppWidget.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "147"
+            endingLineNumber = "147"
+            landmarkName = "body"
+            landmarkType = "24">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "E7FCCC03-C1C2-43A9-A322-78D04FEB6848"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "AppWidget/AppWidget.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "65"
+            endingLineNumber = "65"
+            landmarkName = "getTimeline(for:in:completion:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "72CFD602-F568-4060-9BAA-CC9739C14F19"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "AppWidget/AppWidget.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "50"
+            endingLineNumber = "50"
+            landmarkName = "getTimeline(for:in:completion:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "72CFD602-F568-4060-9BAA-CC9739C14F19 - adf1a09f3a6de58a"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "AppWidgetExtension.Provider.getTimeline(for: AppWidgetExtension.ConfigurationIntent, in: WidgetKit.TimelineProviderContext, completion: (WidgetKit.Timeline&lt;AppWidgetExtension.WorkoutEntry&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "AppWidgetExtension"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/acantor/Documents/GitHub/Gym-App/Gym-App/AppWidget/AppWidget.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "50"
+                  endingLineNumber = "50"
+                  offsetFromSymbolStart = "3100">
+               </Location>
+               <Location
+                  uuid = "72CFD602-F568-4060-9BAA-CC9739C14F19 - adf1a09f3a6de58a"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "AppWidgetExtension.Provider.getTimeline(for: AppWidgetExtension.ConfigurationIntent, in: WidgetKit.TimelineProviderContext, completion: (WidgetKit.Timeline&lt;AppWidgetExtension.WorkoutEntry&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "AppWidgetExtension"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/acantor/Documents/GitHub/Gym-App/Gym-App/AppWidget/AppWidget.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "50"
+                  endingLineNumber = "50"
+                  offsetFromSymbolStart = "3208">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "E91DC3FC-E1D0-4464-99A7-A097F922F59A"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SharedFramework/Extension.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "31"
+            endingLineNumber = "31"
+            landmarkName = "isSameDay(as:in:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "E91DC3FC-E1D0-4464-99A7-A097F922F59A - 7167244663235772"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Foundation.Date.isSameDay(as: Foundation.Date) -&gt; Swift.Bool"
+                  moduleName = "SharedFramework"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/acantor/Documents/GitHub/Gym-App/Gym-App/SharedFramework/Extension.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "31"
+                  endingLineNumber = "31"
+                  offsetFromSymbolStart = "1668">
+               </Location>
+               <Location
+                  uuid = "E91DC3FC-E1D0-4464-99A7-A097F922F59A - 529233439848345b"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Foundation.Date.isSameDay(as: Foundation.Date, in: Foundation.TimeZone) -&gt; Swift.Bool"
+                  moduleName = "SharedFramework"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/acantor/Documents/GitHub/Gym-App/Gym-App/SharedFramework/Extension.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "32"
+                  endingLineNumber = "32"
+                  offsetFromSymbolStart = "2068">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

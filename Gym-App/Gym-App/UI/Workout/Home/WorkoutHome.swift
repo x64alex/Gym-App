@@ -1,9 +1,10 @@
 import SwiftUI
+import SharedFramework
 
 struct WorkoutHome: View {
     var numberWorkouts = 0
     @StateObject var viewModel: ViewModel
-    @EnvironmentObject private var storage: Storage
+    @EnvironmentObject private var storage: WorkoutStorage
 
     @EnvironmentObject private var appState: AppState
     @SceneStorage("isDetailViewActive") private var isDetailViewActive: Bool = false

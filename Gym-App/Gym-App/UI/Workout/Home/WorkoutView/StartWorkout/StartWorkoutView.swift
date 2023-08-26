@@ -1,7 +1,8 @@
 import SwiftUI
+import SharedFramework
 
 struct StartWorkoutView: View {
-    @EnvironmentObject private var storage: Storage
+    @EnvironmentObject private var storage: WorkoutStorage
     @StateObject var viewModel: ViewModel
     
     @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>

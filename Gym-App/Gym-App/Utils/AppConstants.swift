@@ -1,4 +1,5 @@
 import Foundation
+import SharedFramework
 
 enum AppConstants {
     static let exerciseTypes = [
@@ -39,6 +40,13 @@ enum AppConstants {
             Exercise(sets:4, type: "Strength", name: "Low Row", mainMuscleGroup: "Back"),
             Exercise(sets:3, type: "Strength", name: "Triangle Pull", mainMuscleGroup: "Back"),
             Exercise(sets:3, type: "Strength", name: "Hammer Curls", mainMuscleGroup: "Biceps")
+        ]),
+        Workout(name: "Chest Training", exercises: [
+            Exercise(sets:4, type: "Strength", name: "Benchpress", mainMuscleGroup: "Chest"),
+            Exercise(sets:3, type: "Strength", name: "Incline dumbell press", mainMuscleGroup: "Chest"),
+            Exercise(sets:4, type: "Strength", name: "Chest Fly", mainMuscleGroup: "Chest"),
+            Exercise(sets:4, type: "Strength", name: "Dumbbell shoulder press", mainMuscleGroup: "Delts"),
+            Exercise(sets:4, type: "Strength", name: "Cable pull Downs", mainMuscleGroup: "Triceps")
         ]),
         Workout(name: "Benidorm abs", exercises: [
             Exercise(sets: 4, type: "Strength", name: "Leg drops", mainMuscleGroup: "Abs"),

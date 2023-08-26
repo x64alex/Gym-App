@@ -1,11 +1,12 @@
 import Foundation
+import SharedFramework
 
 extension WorkoutHome {
     class ViewModel: ObservableObject {
-        private var storage: Storage
+        private var storage: WorkoutStorage
         @Published var workouts: [Workout] = []
         
-        init(storage: Storage) {
+        init(storage: WorkoutStorage) {
             self.storage = storage
         }
 

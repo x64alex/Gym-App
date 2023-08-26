@@ -1,7 +1,8 @@
 import SwiftUI
+import SharedFramework
 
 struct ListFinishedWorkouts: View {
-    @EnvironmentObject private var storage: Storage
+    @EnvironmentObject private var storage: WorkoutStorage
     @State var workouts: [Workout] = []
     
     

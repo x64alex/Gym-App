@@ -3,10 +3,7 @@ import SharedFramework
 
 struct FinishedWorkouts: View {
     @StateObject var viewModel: ViewModel
-
     @EnvironmentObject private var storage: WorkoutStorage
-
-
     
     var body: some View {
         VStack(spacing: 0) {
@@ -24,7 +21,7 @@ struct FinishedWorkouts: View {
                     )
                  .swipeActions {
                     Button("Remove") {
-                        viewModel.deleteWorkout(index: index)
+                        viewModel.deleteWorkout(workout: viewModel.workouts[index])
                     }
                     .tint(Colors.removeColor)
                 }

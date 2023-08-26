@@ -61,9 +61,6 @@ struct StartWorkoutView: View {
                 .foregroundColor(Color.white)
                 .background(Colors.finishWorkout)
                 .cornerRadius(30)
-//                .sheet(isPresented: $showingSheet) {
-//                    SheetView()
-//                }
             }
             Spacer().frame(height: 20)
             

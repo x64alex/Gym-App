@@ -16,8 +16,8 @@ extension WorkoutHome {
             
         }
         
-        func deleteWorkout(index: Int){
-            workouts = storage.deleteElementAtIndex(storageKey: "workouts", index: index)
+        func deleteWorkout(workout: Workout){
+            workouts = storage.deleteElement(storageKey: "workouts", element: workout)
         }
     }
 }

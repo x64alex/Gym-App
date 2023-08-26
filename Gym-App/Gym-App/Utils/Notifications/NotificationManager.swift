@@ -18,7 +18,7 @@ class NotificationManager: ObservableObject {
         let content = UNMutableNotificationContent()
         content.title = notificationTitle
         content.body = notificationBody
-        content.sound = UNNotificationSound.default // Use default notification sound
+        content.sound = UNNotificationSound.defaultRingtone // Use default notification sound
         
         let trigger = UNTimeIntervalNotificationTrigger(timeInterval: timeInterval, repeats: false)
         let request = UNNotificationRequest(identifier: UUID().uuidString, content: content, trigger: trigger)
@@ -32,4 +32,10 @@ class NotificationManager: ObservableObject {
             }
         }
     }
+    
+//    func removeAllNotifications() {
+//        UNUserNotificationCenter.current().removeAllPendingNotificationRequests()
+//        UNUserNotificationCenter.current().removeAllDeliveredNotifications()
+//        print("All notifications removed")
+//    }
 }

@@ -83,31 +83,46 @@ struct WorkoutEntry: TimelineEntry {
 struct AppWidgetEntryView : View {
     var entry: Provider.Entry
     
-    let days = ["M","Tu","W","Th","F","Su","Sa"]
+    let days = ["M","Tu","W","Th","F","Sa","Su"]
     
+    
+    @ViewBuilder
+    func WorkoutTimeChartView(entry: WorkoutEntry, days: [String]) -> some View {
+        VStack(spacing: 0) {
+            Chart(Array(entry.workoutTime.enumerated()), id: \.offset) { index, workout in
+                BarMark(x: .value("Day", days[index]), y: .value("Time", entry.workoutTime[index]))
+                    .foregroundStyle(AppTheme.activeColorPalette.primary)
+                    .cornerRadius(10)
+            }
+            .chartXAxis {
+                AxisMarks(values: days) { value in
+                    let formattedValue = value.as(String.self) ?? ""
+                    AxisValueLabel {
+                        Text(formattedValue)
+                            .foregroundColor(AppTheme.activeColorPalette.secondaryText)
+                    }
+                }
+            }
+            .chartYScale(domain: 0...7200)
+            .chartYAxis {
+                AxisMarks(values: [0, 3600, 7200]) { value in
+                    let formattedValue = value.as(Int.self) ?? 0
+                    AxisValueLabel {
+                        Text(formattedValue.getStringHours())
+                            .foregroundColor(AppTheme.activeColorPalette.secondaryText)
+                    }
+                }
+            }
+        }
+    }
     
     var body: some View {
         GeometryReader { geometry in
             //TODO: 200 is hardcoded change to iphone width
             if geometry.size.width < 200 {
                 HStack(spacing: 0) {
-                    VStack(spacing: 0) {
-                        Chart(Array(entry.workoutTime.enumerated()), id: \.offset){ index, workout in
-                                BarMark(x: .value("Day", days[index]), y: .value("Time", entry.workoutTime[index]))
-                                .foregroundStyle(Color.red.gradient)
-                                .cornerRadius(10)
-                        }
-                        .chartYScale(domain: 0...7200)
-                        .chartYAxis {
-                            AxisMarks(values: [0, 1800, 3600, 7200]) {
-                            let value = $0.as(Int.self) ?? 0
-                            AxisValueLabel {
-                                Text(value.getStringTime())
-                            }
-                        }
-                     }
-                    }
-                    .frame(width: geometry.size.width*0.8, height: geometry.size.height*0.8)
+                    WorkoutTimeChartView(entry: entry, days: days)
+                        .frame(width: geometry.size.width*0.9, height: geometry.size.height*0.8)
                     
                 }
                 .frame(width: geometry.size.width, height: geometry.size.height)
@@ -130,34 +145,8 @@ struct AppWidgetEntryView : View {
                     .shadow(color: AppTheme.activeColorPalette.backgroundShadow.opacity(0.1), radius: 5, x: 0, y: 2)
 
                     Spacer()
-                    VStack(spacing: 0) {
-                        Chart(Array(entry.workoutTime.enumerated()), id: \.offset){ index, workout in
-                                BarMark(x: .value("Day", days[index]), y: .value("Time", entry.workoutTime[index]))
-                                .foregroundStyle(AppTheme.activeColorPalette.primary)
-                                .cornerRadius(10)
-                        }
-                        .chartXAxis{
-                            AxisMarks(values: days) {
-                                let value = $0.as(String.self) ?? ""
-                                AxisValueLabel {
-                                    Text(value)
-                                        .foregroundColor(AppTheme.activeColorPalette.secondaryText)
-                                }
-                            }
-                        }
-                        .chartYScale(domain: 0...7200)
-                        .chartYAxis {
-                            AxisMarks(values: [0,3600, 7200]) {
-                            let value = $0.as(Int.self) ?? 0
-                            AxisValueLabel {
-                                Text(value.getStringHours())
-                                    .foregroundColor(AppTheme.activeColorPalette.secondaryText)
-                            }
-                        }
-
-                     }
-                    }
-                    .frame(width: geometry.size.width*0.5, height: geometry.size.height*0.8)
+                    WorkoutTimeChartView(entry: entry, days: days)
+                        .frame(width: geometry.size.width*0.5, height: geometry.size.height*0.8)
                     Spacer()
                 }
                 .frame(width: geometry.size.width, height: geometry.size.height)

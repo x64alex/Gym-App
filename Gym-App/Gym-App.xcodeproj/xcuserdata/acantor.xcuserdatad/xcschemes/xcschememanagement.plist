@@ -12,7 +12,7 @@
 		<key>Gym-App.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>1</integer>
+			<integer>2</integer>
 		</dict>
 		<key>Shared.xcscheme_^#shared#^_</key>
 		<dict>
@@ -28,6 +28,24 @@
 		<dict>
 			<key>orderHint</key>
 			<integer>4</integer>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>13054AE62905689D00BD1306</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>AF97A0372A8D335E005745F1</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>AF97A0682A8D3876005745F1</key>
+		<dict>
+			<key>primary</key>
+			<true/>
 		</dict>
 	</dict>
 </dict>

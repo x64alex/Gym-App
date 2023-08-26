@@ -33,9 +33,14 @@ class NotificationManager: ObservableObject {
         }
     }
     
-//    func removeAllNotifications() {
-//        UNUserNotificationCenter.current().removeAllPendingNotificationRequests()
-//        UNUserNotificationCenter.current().removeAllDeliveredNotifications()
-//        print("All notifications removed")
-//    }
+    func removeAllPendingNotifications() {
+        UNUserNotificationCenter.current().removeAllPendingNotificationRequests()
+    }
+    func removeAllDeliveredNotifications(){
+        UNUserNotificationCenter.current().removeAllDeliveredNotifications()
+    }
+    func removeAllNotifications(){
+        self.removeAllPendingNotifications()
+        self.removeAllPendingNotifications()
+    }
 }

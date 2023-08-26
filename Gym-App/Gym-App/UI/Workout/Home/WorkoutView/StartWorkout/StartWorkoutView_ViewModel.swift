@@ -64,13 +64,14 @@ extension StartWorkoutView {
             }
             else{
                 timer?.invalidate()
+                notificationManager.removeAllNotifications()
                 secondsRemaining = 61
                 buttonText = "done"
             }
         }
         
-        func saveWorkout() {
-            
+        func doneWorkout() {
+            notificationManager.removeAllNotifications()
         }
         
         private func updateCountdown() {

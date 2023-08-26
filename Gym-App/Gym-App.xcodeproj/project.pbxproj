@@ -56,6 +56,7 @@
 		AF97A0902A8D3E6F005745F1 /* Exercise.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13054B212905773A00BD1306 /* Exercise.swift */; };
 		AF97A0912A8D3EA7005745F1 /* Repetition.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF76DD682A784BA70014A075 /* Repetition.swift */; };
 		AF97A0932A8D411F005745F1 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF97A0922A8D411F005745F1 /* Extension.swift */; };
+		AF97A0972A993FE5005745F1 /* AppTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF97A0962A993FE5005745F1 /* AppTheme.swift */; };
 		AFC34D8C2A88C8E800F91C05 /* StartWorkoutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFC34D8B2A88C8E800F91C05 /* StartWorkoutView.swift */; };
 		AFC34D8E2A88C90200F91C05 /* StartWorkoutView_ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFC34D8D2A88C90200F91C05 /* StartWorkoutView_ViewModel.swift */; };
 		AFC34D912A890E7000F91C05 /* DateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFC34D902A890E7000F91C05 /* DateExtension.swift */; };
@@ -180,6 +181,7 @@
 		AF97A0922A8D411F005745F1 /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
 		AF97A0942A8D4D95005745F1 /* Gym-App.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Gym-App.entitlements"; sourceTree = "<group>"; };
 		AF97A0952A8D4E11005745F1 /* AppWidgetExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = AppWidgetExtension.entitlements; sourceTree = "<group>"; };
+		AF97A0962A993FE5005745F1 /* AppTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppTheme.swift; sourceTree = "<group>"; };
 		AFC34D8B2A88C8E800F91C05 /* StartWorkoutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartWorkoutView.swift; sourceTree = "<group>"; };
 		AFC34D8D2A88C90200F91C05 /* StartWorkoutView_ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartWorkoutView_ViewModel.swift; sourceTree = "<group>"; };
 		AFC34D902A890E7000F91C05 /* DateExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtension.swift; sourceTree = "<group>"; };
@@ -453,6 +455,7 @@
 				AF97A06B2A8D3876005745F1 /* SharedFramework.h */,
 				AF97A0762A8D38DF005745F1 /* Storage.swift */,
 				AF97A0922A8D411F005745F1 /* Extension.swift */,
+				AF97A0962A993FE5005745F1 /* AppTheme.swift */,
 			);
 			path = SharedFramework;
 			sourceTree = "<group>";
@@ -755,6 +758,7 @@
 				AF97A0932A8D411F005745F1 /* Extension.swift in Sources */,
 				AF97A0772A8D38DF005745F1 /* Storage.swift in Sources */,
 				AF97A08F2A8D3E47005745F1 /* Workout.swift in Sources */,
+				AF97A0972A993FE5005745F1 /* AppTheme.swift in Sources */,
 				AF97A0912A8D3EA7005745F1 /* Repetition.swift in Sources */,
 				AF97A0902A8D3E6F005745F1 /* Exercise.swift in Sources */,
 			);

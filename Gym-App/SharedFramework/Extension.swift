@@ -23,8 +23,9 @@ public extension Date {
         return day
     }
     
-    func isSameDay(as otherDate: Date) -> Bool {
-        let calendar = Calendar.current
+    func isSameDay(as otherDate: Date, in timeZone: TimeZone = TimeZone(identifier: "UTC")!) -> Bool {
+        var calendar = Calendar.current
+        calendar.timeZone = timeZone
         let components1 = calendar.dateComponents([.year, .month, .day], from: self)
         let components2 = calendar.dateComponents([.year, .month, .day], from: otherDate)
         
@@ -56,5 +57,19 @@ public extension Int {
             return String(format: "%01ds", seconds)
         }
     }
+        func getStringHours() -> String {
+            let hours: Int = self / 360
+            
+            if hours > 0 {
+                if(hours % 10 == 0){
+                    return String(format: "%01dh", hours/10)
+                }
+                return String(format: "%.1fh", Double(hours)/10)
+            } else {
+                return "0h"
+            }
+        }
+    
+
 }
 

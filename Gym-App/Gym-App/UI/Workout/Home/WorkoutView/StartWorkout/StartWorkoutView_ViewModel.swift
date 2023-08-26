@@ -71,6 +71,8 @@ extension StartWorkoutView {
         }
         
         func doneWorkout() {
+            workout.duration = Int(Date() - (workout.startDate ?? Date()))
+            _ = storage.addElementArray(storageKey: "doneworkouts", element: workout)
             notificationManager.removeAllNotifications()
         }
         

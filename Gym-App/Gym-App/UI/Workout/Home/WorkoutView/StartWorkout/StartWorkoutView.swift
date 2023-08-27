@@ -22,21 +22,21 @@ struct StartWorkoutView: View {
                 }
                 VStack(spacing: 10) {
                     Text("Reps")
-                    Picker(selection: $viewModel.exercise.repetitions[viewModel.setIndex-1].reps, label: Text("")) {
-                        ForEach((1...50), id:\.self) { reps in
+                    Picker("Select reps",selection: $viewModel.exercise.repetitions[viewModel.setIndex-1].reps) {
+                        ForEach(max(viewModel.exercise.repetitions[viewModel.setIndex-1].reps - 6, 1)...(viewModel.exercise.repetitions[viewModel.setIndex-1].reps + 20), id: \.self) { reps in
                             Text(String(reps))
                         }
                     }
                 }
                 VStack(spacing: 10) {
                     Text("Weight")
-                    Picker(selection: $viewModel.exercise.repetitions[viewModel.setIndex-1].weight, label: Text("")) {
-                        ForEach((0...50), id:\.self) { reps in
-                            if(reps == 0){
+                    Picker("Select weight",selection: $viewModel.exercise.repetitions[viewModel.setIndex-1].weight) {
+                        ForEach((0...50), id:\.self) { weight in
+                            if(weight == 0){
                                 Text("Bodyweight")
                             }
                             else{
-                                Text(String(reps)+" kg")
+                                Text(String(weight)+" kg")
                             }
                         }
                     }
@@ -48,8 +48,8 @@ struct StartWorkoutView: View {
                     viewModel.next()
                 }
                 .frame(width: 80, height: 80)
-                .foregroundColor(Color.white)
-                .background(Color.green)
+                .foregroundColor(AppTheme.activeColorPalette.primaryText)
+                .background(AppTheme.activeColorPalette.primary)
                 .cornerRadius(30)
             } else{
                 Button("Finish") {
@@ -57,13 +57,14 @@ struct StartWorkoutView: View {
                     presentationMode.wrappedValue.dismiss()
                 }
                 .frame(width: 80, height: 80)
-                .foregroundColor(Color.white)
-                .background(Colors.finishWorkout)
+                .foregroundColor(AppTheme.activeColorPalette.primaryText)
+                .background(AppTheme.activeColorPalette.secondary)
                 .cornerRadius(30)
             }
             Spacer().frame(height: 20)
             
         }
+//        .background(AppTheme.activeColorPalette.background)
         .onAppear {
             // Subscribe to scenePhase changes
             NotificationCenter.default.addObserver(forName: UIApplication.didBecomeActiveNotification, object: nil, queue: nil) { _ in

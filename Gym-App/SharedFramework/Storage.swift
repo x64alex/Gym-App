@@ -113,7 +113,6 @@ public class WorkoutStorage: ObservableObject {
     }
     
     public func deleteElement<T: Codable & Equatable>(storageKey: String, element: T) -> [T]{
-        
         let allElements: [T] = self.getArray(storageKey: storageKey)
         for index in 0..<allElements.count {
             if(allElements[index] == element){

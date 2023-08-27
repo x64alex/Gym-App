@@ -9,19 +9,19 @@ struct FinishedWorkouts: View {
         VStack(spacing: 0) {
             DatePicker("Select Date", selection: $viewModel.selectedDate, displayedComponents: .date)
                       .padding(.horizontal)
-            List(0..<viewModel.workouts.count, id: \.self) { index in
+            List($viewModel.workouts) { $workout in
                 HStack(spacing: 0) {
-                    Text(viewModel.workouts[index].name)
+                    Text(workout.name)
                     Spacer()
-                    Text(viewModel.workouts[index].duration.getStringTime())
+                    Text(workout.duration.getStringTime())
                 }
                     .background(
                         NavigationLink("",
-                                destination: DoneWorkoutScreen(viewModel: DoneWorkoutScreen.ViewModel(workoutNumber: index, storage: storage))).opacity(0)
+                                destination: DoneWorkoutScreen(viewModel: DoneWorkoutScreen.ViewModel(workoutNumber: 0, storage: storage))).opacity(0)
                     )
                  .swipeActions {
                     Button("Remove") {
-                        viewModel.deleteWorkout(workout: viewModel.workouts[index])
+                        viewModel.deleteWorkout(workout: workout)
                     }
                     .tint(Colors.removeColor)
                 }

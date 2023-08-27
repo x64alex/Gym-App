@@ -32,6 +32,12 @@ extension StartWorkoutView {
             notificationManager.requestAuthorization()
         }
         
+        func modify(value: inout Int, increase: Bool = true){
+            let change = increase ? 1 : -1
+            value += change
+            
+        }
+        
         func next() {
             workout.exercises[exerciseIndex] = exercise
             _ = storage.updateElementAtIndex(storageKey: "workouts", index: workoutNumber, newElement: workout)

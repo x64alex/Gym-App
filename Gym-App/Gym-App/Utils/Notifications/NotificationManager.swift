@@ -6,9 +6,7 @@ import UserNotifications
 class NotificationManager: ObservableObject {
     func requestAuthorization() {
         UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .sound, .badge]) { (granted, error) in
-            if granted {
-                print("Notification authorization granted")
-            } else if let error = error {
+            if let error = error {
                 print("Notification authorization denied with error: \(error.localizedDescription)")
             }
         }
@@ -27,8 +25,6 @@ class NotificationManager: ObservableObject {
         UNUserNotificationCenter.current().add(request) { error in
             if let error = error {
                 print("Notification error: \(error.localizedDescription)")
-            } else {
-                print("Notification scheduled successfully")
             }
         }
     }

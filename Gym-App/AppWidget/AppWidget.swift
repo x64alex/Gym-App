@@ -97,6 +97,10 @@ struct AppWidgetEntryView : View {
             .chartXAxis {
                 AxisMarks(values: days) { value in
                     let formattedValue = value.as(String.self) ?? ""
+                    if(formattedValue=="M"){
+                        AxisGridLine()
+                            .foregroundStyle(AppTheme.activeColorPalette.secondaryText.opacity(0.3))
+                    }
                     AxisValueLabel {
                         Text(formattedValue)
                             .foregroundColor(AppTheme.activeColorPalette.secondaryText)
@@ -176,9 +180,9 @@ struct AppWidget_Previews: PreviewProvider {
     static var previews: some View {
         AppWidgetEntryView(entry: WorkoutEntry(date: Date(),
                                                configuration: ConfigurationIntent(),
-                                               workoutTime: [200, 500, 0, 0, 0, 0, 0],
+                                               workoutTime: [200, 100, 50, 0, 0, 0, 0],
                                                weekTime: 120,
                                                dayTime: 6320))
-            .previewContext(WidgetPreviewContext(family: .systemSmall))
+        .previewContext(WidgetPreviewContext(family: .systemMedium))
     }
 }

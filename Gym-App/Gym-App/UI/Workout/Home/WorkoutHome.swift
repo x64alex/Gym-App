@@ -26,7 +26,7 @@ struct WorkoutHome: View {
                         })
                     .swipeActions {
                         Button("Remove") {
-                            viewModel.deleteWorkout(index: index)
+                            viewModel.deleteWorkout(workout: viewModel.workouts[index])
                         }
                         .tint(Colors.removeColor)
                     }

@@ -11,7 +11,7 @@ public extension Date {
         return (startOfWeek, endOfWeek)
     }
     
-    func getFirstDayWeek(european:Bool) -> Date {
+    func getFirstDayWeek(european:Bool = false) -> Date {
         let calendar = Calendar.current
         let currentDate = Date()
         

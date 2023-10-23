@@ -26,7 +26,6 @@ struct Provider: IntentTimelineProvider {
         var entries: [WorkoutEntry] = []
         let storage = WorkoutStorage()
         let calendar = Calendar.current
-        
         let workouts: [Workout] = storage.getArray(storageKey: "doneworkouts")
         
         let firstDayWeek = Date().getFirstDayWeek(european: true)
@@ -119,13 +118,13 @@ struct AppWidgetEntryView : View {
             }
         }
     }
-    
+
     var body: some View {
         GeometryReader { geometry in
             //TODO: 200 is hardcoded change to iphone width
             if geometry.size.width < 200 {
                 HStack(spacing: 0) {
-                    WorkoutTimeChartView(entry: entry, days: days)
+                    WeekWorkoutTimeChart(workoutTime: entry.workoutTime)
                         .frame(width: geometry.size.width*0.9, height: geometry.size.height*0.8)
                     
                 }
@@ -149,7 +148,7 @@ struct AppWidgetEntryView : View {
                     .shadow(color: AppTheme.activeColorPalette.backgroundShadow.opacity(0.1), radius: 5, x: 0, y: 2)
 
                     Spacer()
-                    WorkoutTimeChartView(entry: entry, days: days)
+                    WeekWorkoutTimeChart(workoutTime: entry.workoutTime)
                         .frame(width: geometry.size.width*0.5, height: geometry.size.height*0.8)
                     Spacer()
                 }

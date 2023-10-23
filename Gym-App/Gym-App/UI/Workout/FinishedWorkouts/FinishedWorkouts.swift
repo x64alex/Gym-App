@@ -49,7 +49,9 @@ struct FinishedWorkouts: View {
     func changeDate(forward: Bool) {
         let calendar = Calendar.current
         var dateComponents = DateComponents()
-        dateComponents.day = forward ? 1 : -1
+        dateComponents.day = forward ? 7: -7
+        print("date1 \(viewModel.selectedDate)")
         viewModel.selectedDate = calendar.date(byAdding: dateComponents, to: viewModel.selectedDate) ?? viewModel.selectedDate
+        print("date2 \(viewModel.selectedDate)")
     }
 }

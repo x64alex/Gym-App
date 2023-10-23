@@ -18,9 +18,8 @@ extension FinishedWorkouts {
 
         
         func loadWorkouts() {
-            var allworkouts: [Workout] = storage.getArray(storageKey: "doneworkouts")
+            let allworkouts: [Workout] = storage.getArray(storageKey: "doneworkouts")
             workouts = []
-            // Select only from the date
             allworkouts.forEach { workout in
                 guard let workoutDate = workout.startDate else{ return}
                 

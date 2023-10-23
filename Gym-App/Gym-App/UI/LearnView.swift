@@ -32,6 +32,11 @@ struct LearnView: View {
                 Text("See list workouts")
                     .font(.system(size: 20, weight: .bold, design: .rounded))
             })
+            NavigationLink(destination: WeeklyStatisticsView(viewModel: WeeklyStatisticsView.ViewModel(storage: storage)),
+                           label: {
+                Text("See statistics workouts")
+                    .font(.system(size: 20, weight: .bold, design: .rounded))
+            })
         }
     }
     

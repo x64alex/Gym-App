@@ -2,41 +2,69 @@ import SwiftUI
 import SharedFramework
 
 struct AddExercise: View {
-    @State var name: String = ""
-    @State var exerciseType: String = ""
-    @State var mainMuscleGroup: String = ""
-
+    @StateObject var viewModel: ViewModel
     @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
-
-    @EnvironmentObject private var storage: WorkoutStorage
 
     
     var body: some View {
         VStack {
-            Text("Name").font(.headline)
-            TextField("Enter exercise name", text: $name)
-            Picker(selection: $exerciseType, label: Text("")) {
+            let textfield = TextField("Enter exercise name", text: $viewModel.name)
+            let textfield1 = TextField("Enter exercise type", text: $viewModel.exerciseType)
+            let textfield2 = TextField("Enter exercise group", text: $viewModel.mainMuscleGroup)
+            let picker1 = Picker(selection: $viewModel.exerciseType, label: Text("")) {
                 ForEach(AppConstants.exerciseTypes, id:\.self) { exerciseType in
                     Text(exerciseType)
                 }
             }
-            Picker(selection: $exerciseType, label: Text("")) {
+            let picker2 = Picker(selection: $viewModel.exerciseType, label: Text("")) {
                 ForEach(AppConstants.muscleGroups, id:\.self) { muscleGroup in
                     Text(muscleGroup)
                 }
             }
-            Button("Add Exercise") {
-                addExercise()
-                presentationMode.wrappedValue.dismiss()
+            if viewModel.isEditable{
+                HStack(spacing: 10) {
+                    Text("Name: ")
+                    textfield
+                }
+                HStack(spacing: 10) {
+                    Text("Type: ")
+                    textfield1
+                }
+                HStack(spacing: 10) {
+                    Text("Group: ")
+                    textfield2
+                }
+            } else {
+                Text("Name: "+viewModel.name)
+                Text("Type: "+viewModel.exerciseType)
+                Text("Group: "+viewModel.mainMuscleGroup)
             }
-            .disabled(name=="")
-
+            if !viewModel.details {
+                Button("Add Exercise") {
+                    viewModel.addExercise()
+                    presentationMode.wrappedValue.dismiss()
+                }
+                .disabled(viewModel.name=="")
+            }
+            else{
+                if !viewModel.isEditable {
+                    Button("Edit") {
+                        viewModel.isEditable = true
+                    }
+                }else{
+                    HStack{
+                        Button("Save edit") {
+                            viewModel.updateExercise()
+                            viewModel.isEditable = false
+                        }
+                        Button("Cancel") {
+                            viewModel.isEditable = false
+                        }.foregroundColor(Color.red)
+                    }
+                }
+            }
         }
     }
     
-    
-    func addExercise(){
-        let exercise = Exercise(type: exerciseType, name: name, mainMuscleGroup: mainMuscleGroup)
-        _ = storage.addElementArray(storageKey: "exercises", element: exercise)
-    }
+
 }

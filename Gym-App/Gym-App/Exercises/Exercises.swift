@@ -15,10 +15,13 @@ struct Exercises: View {
     var body: some View {
         
         VStack(spacing:0){
-            NavigationView {
 
             List(0..<filteredExercises.count, id: \.self) { index in
-                Text(filteredExercises[index].name)
+                NavigationLink(destination: AddExercise(viewModel: AddExercise.ViewModel(storage: storage, exercise: filteredExercises[index], index: index)),
+                               label: {
+                    Text(filteredExercises[index].name)
+                        .font(.system(size: 20, weight: .bold, design: .rounded))
+                })
                 .swipeActions {
                     Button("Remove") {
                         showAlert = true
@@ -31,17 +34,15 @@ struct Exercises: View {
                         title: Text("Delete Confirmation"),
                         message: Text("Are you sure you want to delete this exercise?"),
                         primaryButton: .destructive(Text("Delete")) {
-                            print(filteredExercises[deleteIndex].name)
                             self.deleteExercise(exercise: filteredExercises[deleteIndex])
                         },
                         secondaryButton: .cancel()
                     )
                 }
             }
-        }
                .searchable(text: $searchText)
             
-            NavigationLink(destination: AddExercise(),
+            NavigationLink(destination: AddExercise(viewModel: AddExercise.ViewModel(storage: storage)),
                            label: {
                 Text("Add exercise")
                     .font(.system(size: 20, weight: .bold, design: .rounded))

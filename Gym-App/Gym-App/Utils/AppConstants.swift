@@ -1,6 +1,12 @@
 import Foundation
 import SharedFramework
 
+
+struct identifablePicker: Identifiable {
+    let id = UUID()
+    let username: String
+}
+
 enum AppConstants {
     static let exerciseTypes = [
         "Aerobic & Cardio",

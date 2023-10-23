@@ -19,7 +19,7 @@ struct Exercises: View {
                 Text(filteredExercises[index].name)
                 .swipeActions {
                     Button("Remove") {
-                        self.deleteExercise(index: index)
+                        self.deleteExercise(exercise: filteredExercises[index])
                     }
                     .tint(Colors.removeColor)
                 }
@@ -47,7 +47,7 @@ struct Exercises: View {
         }
     }
     
-    func deleteExercise(index: Int) {
-        exercises = storage.deleteElementAtIndex(storageKey: "exercises", index: index)
+    func deleteExercise(exercise: Exercise) {
+        exercises = storage.deleteElement(storageKey: "exercises", element: exercise)
     }
 }

@@ -18,7 +18,7 @@ public class Exercise: Codable, Identifiable, Hashable {
         self.type = type
         self.name = name
         self.mainMuscleGroup = mainMuscleGroup
-        self.repetitions = Array(repeating: Repetition(reps: 0, weight: 0), count: sets)
+        self.repetitions = Array(repeating: Repetition(reps: 1, weight: 0), count: sets)
     }
     
     public func getSets() -> Int {

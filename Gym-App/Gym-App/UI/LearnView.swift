@@ -6,12 +6,14 @@ struct LearnView: View {
 
     
     var body: some View {
-        VStack(spacing:10){
+        VStack(spacing:15){
             Text("Learn")
                 .font(.system(size: 30, weight: .bold, design: .rounded))
             Button("Clear workouts") {
-                    UserDefaults.standard.removeObject(forKey: "doneworkouts")
                     UserDefaults.standard.removeObject(forKey: "workouts")
+            }
+            Button("Clear done workouts") {
+                UserDefaults.standard.removeObject(forKey: "doneworkouts")
             }
             Button("Clear exercises") {
                     UserDefaults.standard.removeObject(forKey: "exercises")

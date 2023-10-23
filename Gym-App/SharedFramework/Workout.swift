@@ -1,6 +1,11 @@
 import Foundation
 
-public class Workout: Codable, CustomStringConvertible, Identifiable {
+public class Workout: Codable, CustomStringConvertible, Identifiable, Equatable {
+    public static func == (lhs: Workout, rhs: Workout) -> Bool {
+        return lhs.id == rhs.id
+    }
+    
+    
     public var description: String{
         let value =  exercises.reduce("Name: \(self.name) \nWorkout: \n\n") { partialResult, ex in
             let sets = ex.repetitions.reduce("") { partialResult, rep in
@@ -18,7 +23,7 @@ public class Workout: Codable, CustomStringConvertible, Identifiable {
         return "Date: \(formattedDateTime)\n" + "Duration: \(duration) seconds\n\n" + value
     }
     
-    public let id = UUID()
+    public var id = UUID()
     public var startDate: Date? = nil
     public var duration: Int = 0
     

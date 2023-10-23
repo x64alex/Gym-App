@@ -6,9 +6,7 @@ import UserNotifications
 class NotificationManager: ObservableObject {
     func requestAuthorization() {
         UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .sound, .badge]) { (granted, error) in
-            if granted {
-                print("Notification authorization granted")
-            } else if let error = error {
+            if let error = error {
                 print("Notification authorization denied with error: \(error.localizedDescription)")
             }
         }
@@ -18,7 +16,7 @@ class NotificationManager: ObservableObject {
         let content = UNMutableNotificationContent()
         content.title = notificationTitle
         content.body = notificationBody
-        content.sound = UNNotificationSound.default // Use default notification sound
+        content.sound = UNNotificationSound.defaultRingtone // Use default notification sound
         
         let trigger = UNTimeIntervalNotificationTrigger(timeInterval: timeInterval, repeats: false)
         let request = UNNotificationRequest(identifier: UUID().uuidString, content: content, trigger: trigger)
@@ -27,9 +25,18 @@ class NotificationManager: ObservableObject {
         UNUserNotificationCenter.current().add(request) { error in
             if let error = error {
                 print("Notification error: \(error.localizedDescription)")
-            } else {
-                print("Notification scheduled successfully")
             }
         }
+    }
+    
+    func removeAllPendingNotifications() {
+        UNUserNotificationCenter.current().removeAllPendingNotificationRequests()
+    }
+    func removeAllDeliveredNotifications(){
+        UNUserNotificationCenter.current().removeAllDeliveredNotifications()
+    }
+    func removeAllNotifications(){
+        self.removeAllPendingNotifications()
+        self.removeAllPendingNotifications()
     }
 }

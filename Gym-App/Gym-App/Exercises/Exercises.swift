@@ -8,6 +8,8 @@ struct Exercises: View {
     @EnvironmentObject private var storage: WorkoutStorage
     
     @State var exercises: [Exercise] = []
+    @State var deleteIndex = 0
+    @State private var showAlert = false
 
     
     var body: some View {
@@ -19,11 +21,22 @@ struct Exercises: View {
                 Text(filteredExercises[index].name)
                 .swipeActions {
                     Button("Remove") {
-                        self.deleteExercise(exercise: filteredExercises[index])
+                        showAlert = true
+                        deleteIndex = index
                     }
                     .tint(Colors.removeColor)
                 }
-                
+                .alert(isPresented: $showAlert) {
+                    Alert(
+                        title: Text("Delete Confirmation"),
+                        message: Text("Are you sure you want to delete this exercise?"),
+                        primaryButton: .destructive(Text("Delete")) {
+                            print(filteredExercises[deleteIndex].name)
+                            self.deleteExercise(exercise: filteredExercises[deleteIndex])
+                        },
+                        secondaryButton: .cancel()
+                    )
+                }
             }
         }
                .searchable(text: $searchText)
